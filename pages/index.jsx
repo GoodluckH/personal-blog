@@ -15,7 +15,7 @@ export default function Home() {
         <div>
           <h1 className="text-gray-900 dark:text-white">
             <span className="text-2xl">
-              Hi, I'm <b>Xipu</b>
+              Hi, I&apos;m <b>Xipu</b>
             </span>
           </h1>
           <ul
