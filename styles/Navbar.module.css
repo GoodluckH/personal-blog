@@ -1,0 +1,6 @@
+.navBar {
+  height: 20 vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
