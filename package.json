@@ -32,5 +32,12 @@
     "rehype-code-titles": "^1.0.3",
     "rehype-prism-plus": "^1.1.1",
     "rehype-slug": "^5.0.0"
+  },
+  "type": "commonjs",
+  "exports": {
+    ".": "./index.js",
+    "./jsx-dev-runtime": "./jsx-dev-runtime.js",
+    "./jsx-runtime": "./jsx-runtime.js",
+    "./": "./"
   }
 }
