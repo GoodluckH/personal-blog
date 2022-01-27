@@ -33,11 +33,5 @@
     "rehype-code-titles": "^1.0.3",
     "rehype-prism-plus": "^1.1.1",
     "rehype-slug": "^5.0.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app",
-    "rules": {
-      "jsx-a11y/anchor-is-valid": "off"
-    }
   }
 }
