@@ -4,19 +4,21 @@ import Image from "next/image";
 // import styles from "../styles/Home.module.css";
 import timeGreeting from "../lib/time_based_greeting";
 import { getSortedPostsData } from "../lib/mdx";
-import readingTime from "reading-time";
-import postcss from "postcss";
+import useDarkMode from "../lib/useDarkMode";
 
 export default function Home({ allPostsData }) {
-  allPostsData.map(item => {
-    console.log(item.title)
-  })
+  const [darkMode] = useDarkMode()
   return (
     <>
       <Head>
         <title>Xipu Li</title>
         <meta name="description" content="Xipu Li's personal website" />
-        <link rel="icon" href="/favicon.ico" />
+        {darkMode ? 
+        <link rel="icon" href={`data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>`} />
+          :
+          <link rel="icon" href={`data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔨</text></svg>`} />
+        }
+
       </Head>
       <div className="space-y-24 max-w-4xl px-5">
         {/** my description and intro */}
@@ -71,20 +73,38 @@ export default function Home({ allPostsData }) {
           </p>
 
           <section className="mt-[50px] md:mt-[100px]">
-            <h2>Blog posts</h2>
-        {/*     <ul role="list" className="text-lg md:text-xl "> */}
-              
-              {allPostsData.map((post) => (
-                 <div key={post.slug}>
-                  <h2 >
-                    <Link href={`/posts/${post.slug}`}>{post.title}</Link>
-                  </h2>
-                  <p>{post.summary}</p>
-                   {post.readingTime.text}
-                 </div>
-                 
+            <h2>Blog posts</h2>              
+              {allPostsData.map((post) => {
+                if (!post.draft) {
+
+                  
+                  return(
+                   <div className="mt-5 border-l-[4px] md:border-l-[7px] border-sky-200" key={post.slug}>
+                     <div className="pl-5">
+                      <h2 className="text-xl md:text-2xl pt-0">
+                        <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+                      </h2>
+                      
+  
+                      <div className="flex items-center space-x-3">
+  
+                      <p className="px-3 py-1 text-sm font-medium text-sky-500 bg-gray-100 dark:bg-slate-200 rounded-full">
+                      {post.readingTime.text}
+                      </p>
+                      <p className="px-3 py-1 text-sm font-medium text-sky-500 bg-gray-100 dark:bg-slate-200 rounded-full">
+                      {post.publishedAt}
+                      </p>
+  
+                      </div>
+  
+                      <p className="text-base italic pt-3 dark:text-gray-300">{post.summary}</p>
+                     </div>
+             
+                   </div>
+                   )
+                }
                
-              ))}
+              })}
               
    
           </section>

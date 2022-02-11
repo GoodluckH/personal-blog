@@ -39,15 +39,22 @@ export default function Navbar() {
 
           <div className="space-x-1.5 flex items-center">
             {/*Dark mode toggle*/}
+            {/*     <button
+              onClick={toggleDarkMode}
+              className="w-9 h-9 text-gray-800 transition-colors duration-500 ease-in-out inline-flex
+              items-center justify-center dark:bg-transparent dark:border-gray-300 dark:text-white"
+            >
+              Now
+            </button> */}
             <button
               onClick={toggleDarkMode}
-              className="w-9 h-9 rounded-full text-gray-800 transition-colors duration-500 hover:bg-gray-100 inline-flex
-              items-center justify-center border border-gray-400 dark:bg-transparent dark:border-gray-300 dark:text-white ring-blue-500 focus:ring-2 focus:outline-none"
+              className="w-9 h-9 text-gray-800 transition-colors duration-500 ease-in-out inline-flex
+              items-center justify-center dark:bg-transparent dark:border-gray-300 dark:text-white"
             >
               {darkMode ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="h-7 w-7"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
