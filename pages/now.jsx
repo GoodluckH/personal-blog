@@ -95,6 +95,19 @@ export default function Home() {
             </li>
             </ul>
           </section>
+
+          <p className="pt-10 italic text-sm sm:text-sm text-slate-500 dark:text-slate-500">Inspired by <a
+                href="https://www.natecation.com/"
+                target="_blank"
+                rel="noreferrer"
+                >Nathan Leung
+                  </a>&apos; <a
+                href="https://www.natecation.com/now/"
+                target="_blank"
+                rel="noreferrer"
+                >
+                 now
+              </a> page.</p>
         </div>
       </div>
     </>

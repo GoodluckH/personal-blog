@@ -107,8 +107,6 @@ export default function Home({ allPostsData }) {
                 }
                
               })}
-              
-   
           </section>
         </div>
       </div>
