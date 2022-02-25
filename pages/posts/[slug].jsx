@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import Image from "next/image";
 import Head from "next/head";
+import useDarkMode from "../../lib/useDarkMode";
 
 
 import { getFiles, getFileBySlug } from "../../lib/mdx";
@@ -12,11 +13,17 @@ import {Markup} from 'interweave';
 export default function BlogSlug({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
   let caption = String(frontMatter.coverImageCaption)
+  const [darkMode] = useDarkMode()
   return (
     <>
       <Head>
         <title>{frontMatter.title} || Xipu Li</title>
         <meta name="description" content={frontMatter.summary} />
+        {darkMode ? 
+        <link rel="icon" href={`data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>`} />
+          :
+          <link rel="icon" href={`data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔨</text></svg>`} />
+        }
       </Head>
       <div className="flex max-w-6xl mx-auto">
         <div className="flex flex-col max-w-4xl px-5 mx-auto space-y-10">

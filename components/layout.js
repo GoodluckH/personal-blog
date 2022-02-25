@@ -1,6 +1,5 @@
 import Navbar from "./navbar";
-import Footer from "./footer";
-
+import SocialIcons from "./SocialIcons";
 export default function Layout({ children, home }) {
   return (
     <div>
@@ -9,7 +8,9 @@ export default function Layout({ children, home }) {
           <Navbar />
         </header>
         <main className="max-w-4xl mx-auto px-4 pb-24 pt-28">{children}</main>
-        <footer>{/*TODO*/}</footer>
+        <footer className="sticky top-[100vh] pb-1 sm:pb-5 md:pb-8">
+          <SocialIcons />
+        </footer>
       </div>
     </div>
   );

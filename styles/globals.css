@@ -38,6 +38,11 @@ body {
   h2 {
     @apply text-2xl pt-3 pb-1 md:text-3xl md:pt-5 md:pb-2 font-semibold text-black dark:text-slate-200;
   }
+
+  h3 {
+    @apply text-xl pt-3 pb-1 md:text-2xl md:pt-5 md:pb-2 font-semibold text-slate-700 dark:text-slate-300;
+  }
+
   p {
     @apply text-base md:text-lg;
   }

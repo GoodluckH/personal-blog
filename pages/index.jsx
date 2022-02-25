@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import SocialIcons from "../components/SocialIcons"
 // import styles from "../styles/Home.module.css";
 import timeGreeting from "../lib/time_based_greeting";
 import { getSortedPostsData } from "../lib/mdx";
@@ -69,22 +70,23 @@ export default function Home({ allPostsData }) {
             </li>
           </ul>
           <p className="py-1 text-slate-900 dark:text-gray-300 text-lg md:text-xl">
-            Now, I&apos;m working full-time in finance and building apps on the side.
+            <Link href={"/now/"}><a>Now</a></Link>
+           , I am in Manhattan, NY
           </p>
+
 
           <section className="mt-[50px] md:mt-[100px]">
             <h2>Blog posts</h2>              
               {allPostsData.map((post) => {
                 if (!post.draft) {
-
-                  
                   return(
                    <div className="mt-5 border-l-[4px] md:border-l-[7px] border-sky-200" key={post.slug}>
                      <div className="pl-5">
                       <h2 className="text-xl md:text-2xl pt-0">
-                        <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+                        <Link href={`/posts/${post.slug}`}>
+                          <a> {post.title} </a>
+                          </Link>
                       </h2>
-                      
   
                       <div className="flex items-center space-x-3">
   

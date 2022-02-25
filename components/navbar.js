@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import useDarkMode from "../lib/useDarkMode";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { makePublicRouterInstance, useRouter } from "next/router";
 
 export default function Navbar() {
   const router = useRouter();
@@ -27,15 +27,18 @@ export default function Navbar() {
       <div className="py-3">
         <div className="mx-auto max-w-4xl flex justify-between items-center px-9">
           {/*If not home page, then display link to home*/}
-          <nav className="space-x-4 ">
-            {router.pathname !== "/" && (
-              <Link href="/">
-                <a className="text-black dark:text-white text-lg md:text-xl font-semibold">
-                  Xipu Li
-                </a>
-              </Link>
-            )}
-          </nav>
+          {router.pathname !== "/" && (
+            <Link href="/">
+              <a className="text-black dark:text-white font-semibold">
+                Xipu Li
+              </a>
+            </Link>
+          )}
+          {router.pathname == "/" && (
+            <Link href={"/now/"}>
+              <a className="text-black dark:text-white font-semibold">Now</a>
+            </Link>
+          )}
 
           <div className="space-x-1.5 flex items-center">
             {/*Dark mode toggle*/}
@@ -46,6 +49,17 @@ export default function Navbar() {
             >
               Now
             </button> */}
+            <nav className="space-x-4 ">
+              {router.pathname !== "/now" && router.pathname !== "/" && (
+                <span>
+                  <Link href={"/now/"}>
+                    <a className="text-black dark:text-white font-semibold">
+                      Now
+                    </a>
+                  </Link>
+                </span>
+              )}
+            </nav>
             <button
               onClick={toggleDarkMode}
               className="w-9 h-9 text-gray-800 transition-colors duration-500 ease-in-out inline-flex
@@ -54,7 +68,7 @@ export default function Navbar() {
               {darkMode ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
