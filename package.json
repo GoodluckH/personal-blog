@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.1",
     "@types/react": "^17.0.38",
     "interweave": "^12.9.0",
     "mdx-bundler": "^8.0.1",

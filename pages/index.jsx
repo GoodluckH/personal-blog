@@ -1,12 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
-import SocialIcons from "../components/SocialIcons"
-// import styles from "../styles/Home.module.css";
-import timeGreeting from "../lib/time_based_greeting";
 import { getSortedPostsData } from "../lib/mdx";
 import useDarkMode from "../lib/useDarkMode";
-
+import ProjectGrid from "../components/ProjectGrid"
+import projects from "../data/projects.json"
 export default function Home({ allPostsData }) {
   const [darkMode] = useDarkMode()
   return (
@@ -73,6 +70,13 @@ export default function Home({ allPostsData }) {
             <Link href={"/now/"}><a>Now</a></Link>
            , I am in Manhattan, NY
           </p>
+
+          
+            {/*Projects section*/}
+            <section className="mt-[50px] md:mt-[100px]">
+              <h2>Projects</h2>
+              <ProjectGrid projects={projects}/>
+            </section>
 
 
           <section className="mt-[50px] md:mt-[100px]">
