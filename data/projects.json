@@ -38,8 +38,8 @@
     },
     {
       "title":"Rolodex",
-      "description":"Logistic regression machine learning model for predicting whether you won or lost a League game based on your current in-game stats",
-      "image":"/project_images/isitgg.jpg",
+      "description":"Ditch the spreadsheet! Start managing your professional network whenever and wherever you are.",
+      "image":"/project_images/rolodex.png",
       "href":"https://github.com/GoodluckH/rolodex-on-prem",
       "stack": [
         "React",

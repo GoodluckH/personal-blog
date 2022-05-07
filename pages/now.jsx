@@ -28,7 +28,7 @@ export default function Home() {
           </h2>
           <h4 className="text-gray-500 dark:text-gray-400">
             <span className="text-base italic md:text-md">
-            As of Feb 24, 2022
+            As of May 6, 2022
             </span>
           </h4>
           <section className="mt-[10px] md:mt-[10px]">
@@ -51,13 +51,11 @@ export default function Home() {
               >VTOL</a> rideshare accessible to everyone (think Uber for drones).
             </p>
 
-            <h3 className="mt-[10px] md:mt-[20px]">mealq</h3> 
+            <h3 className="mt-[10px] md:mt-[20px]">LeetCode</h3> 
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              If I have a MacBook and know how to code, why not build some iOS apps? mealq is a social networking app that I spend a good portion of my free time on.
-            </p>
-            <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-             It is still in beta, sign up here [link to come] to become a beta tester!
-            </p>
+              Apparently, I am breaking into tech at a very difficult time. Grinding LeetCode appears to be a good use of my free time.          
+              </p>
+        
 
             <h3 className="mt-[10px] md:mt-[20px]">Reading</h3> 
             <ul
