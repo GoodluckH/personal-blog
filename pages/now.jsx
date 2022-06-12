@@ -28,15 +28,18 @@ export default function Home() {
           </h2>
           <h4 className="text-gray-500 dark:text-gray-400">
             <span className="text-base italic md:text-md">
-            As of May 6, 2022
+            As of June 11, 2022
             </span>
           </h4>
           <section className="mt-[10px] md:mt-[10px]">
-            <h3 className="mt-[10px] md:mt-[20px]">Manhanttan, NY</h3> 
+            <h3 className="mt-[10px] md:mt-[20px]">San Diego, CA</h3> 
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              After my graduation, I have started my full-time job at EDPR as an Investment Analyst. 
+              I will be spending this summer in San Diego for a software engineer internship at <a 
+              href="https://edge.app/"
+              target="_blank"
+              rel="noreferrer"
+              >Edge</a>.
             </p>
-            <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">Currently, I work and live in Manhattan. </p>
 
             <h3 className="mt-[10px] md:mt-[20px]">VTOL</h3> 
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
