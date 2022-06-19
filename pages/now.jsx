@@ -28,7 +28,7 @@ export default function Home() {
           </h2>
           <h4 className="text-gray-500 dark:text-gray-400">
             <span className="text-base italic md:text-md">
-            As of June 11, 2022
+            As of June 18, 2022
             </span>
           </h4>
           <section className="mt-[10px] md:mt-[10px]">
@@ -77,22 +77,13 @@ export default function Home() {
             </li>
             <li>
               <a
-                href="https://www.amazon.com/Token-Economy-Web3-reinvents-Internet/dp/3982103819"
+                href="https://www.amazon.com/Give-Take-Helping-Others-Success"
                 target="_blank"
                 rel="noreferrer"
                 className="italic"
               >
-                Token Economy: How the Web3 reinvents the Internet
+                Give and Take: A Revolutionary Approach to Success
               </a>
-            </li>
-            <li>
-              The <a
-                href="https://doc.rust-lang.org/book/"
-                target="_blank"
-                rel="noreferrer"
-                className="italic">
-                 book
-              </a> to learn Rust programming language
             </li>
             </ul>
           </section>

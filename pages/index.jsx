@@ -68,7 +68,7 @@ export default function Home({ allPostsData }) {
           </ul>
           <p className="py-1 text-slate-900 dark:text-gray-300 text-lg md:text-xl">
             <Link href={"/now/"}><a>Now</a></Link>
-           , I am in Manhattan, NY
+           , I am in San Diego, CA
           </p>
 
           

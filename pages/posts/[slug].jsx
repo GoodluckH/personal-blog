@@ -58,6 +58,7 @@ export default function BlogSlug({ code, frontMatter }) {
           <article>
             <Component components={{ ...MDXComponent }} />
           </article>
+          <hr/>
         </div>
       </div>
     </>
