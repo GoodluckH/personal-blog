@@ -29,6 +29,7 @@ export default function BlogSlug({ code, frontMatter }) {
         <div className="flex flex-col max-w-4xl px-5 mx-auto space-y-10">
           <div className="flex flex-col mt-25 space-y-7">
             {frontMatter.draft ? <h2 className="text-red-500">DRAFT</h2> : <></>}
+            {frontMatter.chinese ? <h2 className="text-red-500">中文</h2> : <></>}
             <h1>{frontMatter.title}</h1>
             <p className="text-xl text-gray-500 dark:text-gray-400">{frontMatter.summary}</p>
             <div className="flex items-center space-x-3">

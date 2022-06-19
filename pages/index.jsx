@@ -82,7 +82,7 @@ export default function Home({ allPostsData }) {
           <section className="mt-[50px] md:mt-[100px]">
             <h2>Blog posts</h2>              
               {allPostsData.map((post) => {
-                if (!post.draft) {
+                if (!post.draft && !post.chinese) {
                   return(
                    <div className="mt-5 border-l-[4px] md:border-l-[7px] border-sky-200" key={post.slug}>
                      <div className="pl-5">
