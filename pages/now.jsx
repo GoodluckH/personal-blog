@@ -34,7 +34,7 @@ export default function Home() {
           <section className="mt-[10px] md:mt-[10px]">
             <h3 className="mt-[10px] md:mt-[20px]">San Francisco, CA</h3> 
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              I am back to school. This year I will try to get a driver's license.
+              I am back to school. This year I will try to get a driver&#39;s license.
             </p>
 
             <h3 className="mt-[10px] md:mt-[20px]">VTOL</h3> 
