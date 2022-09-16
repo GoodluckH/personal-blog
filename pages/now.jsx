@@ -28,17 +28,13 @@ export default function Home() {
           </h2>
           <h4 className="text-gray-500 dark:text-gray-400">
             <span className="text-base italic md:text-md">
-            As of June 18, 2022
+            As of Sep 16, 2022
             </span>
           </h4>
           <section className="mt-[10px] md:mt-[10px]">
-            <h3 className="mt-[10px] md:mt-[20px]">San Diego, CA</h3> 
+            <h3 className="mt-[10px] md:mt-[20px]">San Francisco, CA</h3> 
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              I will be spending this summer in San Diego for a software engineer internship at <a 
-              href="https://edge.app/"
-              target="_blank"
-              rel="noreferrer"
-              >Edge</a>.
+              I am back to school. This year I will try to get a driver's license.
             </p>
 
             <h3 className="mt-[10px] md:mt-[20px]">VTOL</h3> 
@@ -54,9 +50,9 @@ export default function Home() {
               >VTOL</a> rideshare accessible to everyone (think Uber for drones).
             </p>
 
-            <h3 className="mt-[10px] md:mt-[20px]">LeetCode</h3> 
+            <h3 className="mt-[10px] md:mt-[20px]">Life</h3> 
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              Apparently, I am breaking into tech at a very difficult time. Grinding LeetCode appears to be a good use of my free time.          
+              Since I have already secured a software engineer internship for summer 2023, I plan to fully enjoy life to make up my rather hectic undergrad time. hmu if you are around SF, I am down to try out anything!      
               </p>
         
 
@@ -67,7 +63,7 @@ export default function Home() {
           >
             <li>
               <a
-                href="https://www.amazon.com/Theodore-Roosevelt-Modern-Library-Paperback/dp/0375756787"
+                href="https://amzn.to/3UbUyup"
                 target="_blank"
                 rel="noreferrer"
                 className="italic"
@@ -77,12 +73,12 @@ export default function Home() {
             </li>
             <li>
               <a
-                href="https://www.amazon.com/Give-Take-Helping-Others-Success"
+                href="https://amzn.to/3Bu3vGW"
                 target="_blank"
                 rel="noreferrer"
                 className="italic"
               >
-                Give and Take: A Revolutionary Approach to Success
+                Amazon Unbound: Jeff Bezos and the Invention of a Global Empire
               </a>
             </li>
             </ul>
