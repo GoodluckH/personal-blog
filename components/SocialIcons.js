@@ -47,5 +47,5 @@ export default function SocialIcons() {
         </svg>
       </a>
     </div>
-  );
+  )
 }

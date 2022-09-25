@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
 const BlogCard = (data) => {
   return (
@@ -30,7 +30,7 @@ const BlogCard = (data) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BlogCard;
+export default BlogCard

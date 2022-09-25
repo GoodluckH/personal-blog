@@ -1,41 +1,41 @@
-import { useState, useEffect } from "react";
-import useDarkMode from "../lib/useDarkMode";
-import Link from "next/link";
-import { makePublicRouterInstance, useRouter } from "next/router";
+import { useState, useEffect } from 'react'
+import useDarkMode from '../lib/useDarkMode'
+import Link from 'next/link'
+import { makePublicRouterInstance, useRouter } from 'next/router'
 
 export default function Navbar() {
-  const router = useRouter();
-  const [darkMode, toggleDarkMode] = useDarkMode();
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => setScrollPosition(window.scrollY);
+  const router = useRouter()
+  const [darkMode, toggleDarkMode] = useDarkMode()
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const handleScroll = () => setScrollPosition(window.scrollY)
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <div
       className={`w-full transition duration-500 ease-in-out ${
-        darkMode ? "bg-slate-900" : "bg-white"
+        darkMode ? 'bg-slate-900' : 'bg-white'
       } backdrop-filter  ${
         scrollPosition > 100
-          ? "backdrop-blur-md bg-opacity-80"
-          : "backdrop-blur-sm bg-opacity-20"
+          ? 'backdrop-blur-md bg-opacity-80'
+          : 'backdrop-blur-sm bg-opacity-20'
       }`}
     >
       <div className="py-3">
         <div className="mx-auto max-w-4xl flex justify-between items-center px-9">
           {/*If not home page, then display link to home*/}
-          {router.pathname !== "/" && (
+          {router.pathname !== '/' && (
             <Link href="/">
               <a className="text-black dark:text-white font-semibold">
                 Xipu Li
               </a>
             </Link>
           )}
-          {router.pathname == "/" && (
-            <Link href={"/now/"}>
+          {router.pathname == '/' && (
+            <Link href={'/now/'}>
               <a className="text-black dark:text-white font-semibold">Now</a>
             </Link>
           )}
@@ -50,9 +50,9 @@ export default function Navbar() {
               Now
             </button> */}
             <nav className="space-x-4 ">
-              {router.pathname !== "/now" && router.pathname !== "/" && (
+              {router.pathname !== '/now' && router.pathname !== '/' && (
                 <span>
-                  <Link href={"/now/"}>
+                  <Link href={'/now/'}>
                     <a className="text-black dark:text-white font-semibold">
                       Now
                     </a>
@@ -91,12 +91,12 @@ export default function Navbar() {
                 </svg>
               )}
               <span className="sr-only">
-                {darkMode ? "Disable dark mode" : "Enable dark mode"}
+                {darkMode ? 'Disable dark mode' : 'Enable dark mode'}
               </span>
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

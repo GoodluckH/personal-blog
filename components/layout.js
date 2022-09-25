@@ -1,5 +1,5 @@
-import Navbar from "./navbar";
-import SocialIcons from "./SocialIcons";
+import Navbar from './navbar'
+import SocialIcons from './SocialIcons'
 export default function Layout({ children, home }) {
   return (
     <div>
@@ -13,5 +13,5 @@ export default function Layout({ children, home }) {
         </footer>
       </div>
     </div>
-  );
+  )
 }

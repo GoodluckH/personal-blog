@@ -1,10 +1,10 @@
-import { useState } from "react";
-import readingTime from "reading-time";
-import { MdExpandMore, MdExpandLess } from "react-icons/md";
-import { IconContext } from "react-icons";
+import { useState } from 'react'
+import readingTime from 'reading-time'
+import { MdExpandMore, MdExpandLess } from 'react-icons/md'
+import { IconContext } from 'react-icons'
 
 export default function ExpandableCard(props) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false)
 
   return (
     <div className="bg-gray-50 border-gray-300 dark:border-slate-500 border-[2px] rounded-xl p-3 text-left drop-shadow-sm dark:bg-slate-800">
@@ -16,7 +16,7 @@ export default function ExpandableCard(props) {
           <IconContext.Provider
             value={{
               className:
-                "text-xl md:text-3xl font-heavy text-gray-600 dark:text-slate-300",
+                'text-xl md:text-3xl font-heavy text-gray-600 dark:text-slate-300',
             }}
           >
             {expanded ? <MdExpandLess /> : <MdExpandMore />}
@@ -29,5 +29,5 @@ export default function ExpandableCard(props) {
         </div>
       )}
     </div>
-  );
+  )
 }

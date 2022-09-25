@@ -1,51 +1,38 @@
 [
-    {
-        "title":"Smart Call",
-        "description":"A web app that allows no-code interactions with Smart Contracts exist on Ethereum networks",
-        "image":"/project_images/smartcall.jpg",
-        "href":"https://github.com/GoodluckH/Smart-Call",
-        "stack": [
-          "React",
-          "Ether.js",
-          "Chakra UI"
-        ]
-      },
-    {
-      "title":"mealq",
-      "description":"An iOS-based social networking app that allows grabbing meals with friends a smooth experience instead of a logistics headache",
-      "image":"/project_images/mealq.jpg",
-      "href":"https://apps.apple.com/us/app/apple-store/id1594982631",
-      "stack": [
-        "Swift",
-        "SwiftUI",
-        "Firebase",
-        "Cloud Functions",
-        "JWT Authentication",
-        "OAuth 2.0"
-      ]
-    },
+  {
+    "title": "Smart Call",
+    "description": "A web app that allows no-code interactions with Smart Contracts exist on Ethereum networks",
+    "image": "/project_images/smartcall.jpg",
+    "href": "https://github.com/GoodluckH/Smart-Call",
+    "stack": ["React", "Ether.js", "Chakra UI"]
+  },
+  {
+    "title": "mealq",
+    "description": "An iOS-based social networking app that allows grabbing meals with friends a smooth experience instead of a logistics headache",
+    "image": "/project_images/mealq.jpg",
+    "href": "https://apps.apple.com/us/app/apple-store/id1594982631",
+    "stack": [
+      "Swift",
+      "SwiftUI",
+      "Firebase",
+      "Cloud Functions",
+      "JWT Authentication",
+      "OAuth 2.0"
+    ]
+  },
 
-    {
-      "title":"Algo Visualized",
-      "description":"Visualized path-finding algorithms such as DFS, BFS, Dijkastra and A*. Written in plain HTML, CSS, and JavaScript",
-      "image":"/project_images/algovis.jpg",
-      "href":"https://github.com/GoodluckH/algo-visualized",
-      "stack": [
-        "JavaScript",
-        "HTML",
-        "CSS"
-      ]
-    },
-    {
-      "title":"Rolodex",
-      "description":"Ditch the spreadsheet! Start managing your professional network whenever and wherever you are.",
-      "image":"/project_images/rolodex.png",
-      "href":"https://github.com/GoodluckH/rolodex-on-prem",
-      "stack": [
-        "React",
-        "Express",
-        "MongoDB",
-        "Node.js"
-      ]
-    }
-  ]
+  {
+    "title": "Algo Visualized",
+    "description": "Visualized path-finding algorithms such as DFS, BFS, Dijkastra and A*. Written in plain HTML, CSS, and JavaScript",
+    "image": "/project_images/algovis.jpg",
+    "href": "https://github.com/GoodluckH/algo-visualized",
+    "stack": ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    "title": "Rolodex",
+    "description": "Ditch the spreadsheet! Start managing your professional network whenever and wherever you are.",
+    "image": "/project_images/rolodex.png",
+    "href": "https://github.com/GoodluckH/rolodex-on-prem",
+    "stack": ["React", "Express", "MongoDB", "Node.js"]
+  }
+]
