@@ -4,6 +4,7 @@ import { getSortedPostsData } from '../lib/mdx'
 import useDarkMode from '../lib/useDarkMode'
 import ProjectGrid from '../components/ProjectGrid'
 import projects from '../data/projects.json'
+import Subscribe from '../components/Subscribe'
 export default function Home({ allPostsData }) {
   const [darkMode] = useDarkMode()
   return (
@@ -109,13 +110,16 @@ export default function Home({ allPostsData }) {
           </p>
 
           {/*Projects section*/}
-          <section className="mt-[50px] md:mt-[100px]">
+          <section className="mt-[50px] md:mt-[80px]">
             <h2>Projects</h2>
             <ProjectGrid projects={projects} />
           </section>
 
-          <section className="mt-[50px] md:mt-[100px]">
+          <section className="mt-[50px] md:mt-[80px]">
             <h2>Blog posts</h2>
+            <section className="mt-[20px] mb-[40px] md:mt-[20px] md:mb-[40px]">
+            <Subscribe />
+          </section>
             {allPostsData.map((post) => {
               if (!post.draft && !post.chinese) {
                 return (
