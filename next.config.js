@@ -1,5 +1,11 @@
 module.exports = {
   reactStrictMode: true,
+  rewrites: async () => [
+    {
+      source: '/rss.xml',
+      destination: '/api/rss',
+    },
+  ],
 
   // webpack: (config, { dev, isServer }) => {
   //   if (!dev && !isServer) {
