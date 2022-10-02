@@ -31,7 +31,7 @@ handler.get(async (req, res) => {
           <link>${url}</link>
           <guid>${url}</guid>
           <pubDate>${page.data.publishedAt}</pubDate>
-          <coverImage>${coverImage}</coverImage>
+          <media:content url=${coverImage} medium="image" width="800" height="533">
           <coverImageCaption>${page.data.coverImageCaption}</coverImageCaption>
           ${
             page.data.summary &&
