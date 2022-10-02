@@ -31,8 +31,8 @@ handler.get(async (req, res) => {
           <link>${url}</link>
           <guid>${url}</guid>
           <pubDate>${page.data.publishedAt}</pubDate>
-          <media:content url=${coverImage} medium="image" width="800" height="533">
-          <coverImageCaption>${page.data.coverImageCaption}</coverImageCaption>
+          <media:content medium="image" url="${coverImage}" />
+          <comments>${page.data.coverImageCaption}</comments>
           ${
             page.data.summary &&
             `<description>${page.data.summary}</description>`
@@ -44,7 +44,7 @@ handler.get(async (req, res) => {
 
     // Add urlSet to entire sitemap string
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"  xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
       <channel>
       <title>${metadata.title}</title>
       <description>${metadata.description}</description>
