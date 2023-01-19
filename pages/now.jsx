@@ -33,14 +33,13 @@ export default function Home() {
           </h2>
           <h4 className="text-gray-500 dark:text-gray-400">
             <span className="text-base italic md:text-md">
-              As of Sep 25, 2022
+              As of Jan 19, 2023
             </span>
           </h4>
           <section className="mt-[10px] md:mt-[10px]">
             <h3 className="mt-[10px] md:mt-[20px]">San Francisco, CA</h3>
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              I am back to school. This year I will try to get a driver&#39;s
-              license.
+              I am back to school. And I got my driver&#39;s license.
             </p>
 
             <h3 className="mt-[10px] md:mt-[20px]">VTOL</h3>
@@ -57,15 +56,12 @@ export default function Home() {
               >
                 VTOL
               </a>{' '}
-              rideshare accessible to everyone (think Uber for drones).
+              rideshare accessible to everyone (think Uber for flying cars).
             </p>
 
-            <h3 className="mt-[10px] md:mt-[20px]">Life</h3>
+            <h3 className="mt-[10px] md:mt-[20px]">CommandK</h3>
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              Since I have already secured a software engineer internship for
-              summer 2023, I plan to fully enjoy life to make up my rather
-              hectic undergrad time. hmu if you are around SF, I am down to try
-              out anything!
+              I&#39;m building a startup that aims to make documentations interactive and personalized. Follow us on <a href="https://twitter.com/_commandk" target="_blank" rel="noreferrer">Twitter</a>.
             </p>
 
             <h3 className="mt-[10px] md:mt-[20px]">Reading</h3>
@@ -85,6 +81,27 @@ export default function Home() {
               </li>
               <li>
                 <a
+                  href="https://amzn.to/3WqWj6J"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                 Lights Out: Pride, Delusion, and the Fall of General Electric
+                </a>
+              </li>
+             
+              
+            </ul>
+            <h2></h2>
+
+            <ExpandableCard title="Book Shelf">
+            <h3 className="mt-[10px] md:mt-[20px]">2023</h3>
+              <ul
+                role="list"
+                className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
+              >
+            <li>
+                <a
                   href="https://amzn.to/3DTiAV3"
                   target="_blank"
                   rel="noreferrer"
@@ -93,7 +110,15 @@ export default function Home() {
                   Ikigai: The Japanese Secret to a Long and Happy Life
                 </a>
               </li>
-              <li>
+                </ul>
+
+
+              <h3 className="mt-[10px] md:mt-[20px]">2022</h3>
+              <ul
+                role="list"
+                className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
+              >
+                <li>
                 <a
                   href="https://amzn.to/3SucSwY"
                   target="_blank"
@@ -104,15 +129,6 @@ export default function Home() {
                   Soul
                 </a>
               </li>
-            </ul>
-            <h2></h2>
-
-            <ExpandableCard title="Book Shelf">
-              <h3 className="mt-[10px] md:mt-[20px]">2022</h3>
-              <ul
-                role="list"
-                className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
-              >
                 <li>
                   <a
                     href="https://amzn.to/3Bu3vGW"
