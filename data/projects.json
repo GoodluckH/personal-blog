@@ -1,5 +1,12 @@
 [
   {
+    "title": "HearHear",
+    "description": "Records and transcribes audio in real-time for Discord.",
+    "image": "/project_images/hearhear.png",
+    "href": "https://hearhear.vercel.app",
+    "stack": ["React", "AWS", "OpenAI"]
+  },
+  {
     "title": "Smart Call",
     "description": "A web app that allows no-code interactions with Smart Contracts exist on Ethereum networks",
     "image": "/project_images/smartcall.jpg",

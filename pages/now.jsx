@@ -33,13 +33,13 @@ export default function Home() {
           </h2>
           <h4 className="text-gray-500 dark:text-gray-400">
             <span className="text-base italic md:text-md">
-              As of Jan 19, 2023
+              As of June 23, 2023
             </span>
           </h4>
           <section className="mt-[10px] md:mt-[10px]">
             <h3 className="mt-[10px] md:mt-[20px]">San Francisco, CA</h3>
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              I am back to school. And I got my driver&#39;s license.
+              I am interning at Amazon as a Software Development Engineer with the FireTV Appstore team.
             </p>
 
             <h3 className="mt-[10px] md:mt-[20px]">VTOL</h3>
@@ -59,9 +59,9 @@ export default function Home() {
               rideshare accessible to everyone (think Uber for flying cars).
             </p>
 
-            <h3 className="mt-[10px] md:mt-[20px]">CommandK</h3>
+            <h3 className="mt-[10px] md:mt-[20px]">Complish</h3>
             <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              I&#39;m building a startup that aims to make documentations interactive and personalized. Follow us on <a href="https://twitter.com/_commandk" target="_blank" rel="noreferrer">Twitter</a>.
+              I&#39;m building am <a href="https:/complish.ai" target="_blank" rel="noreferrer">app</a> that uses AI to generate personalized motivational speeches.
             </p>
 
             <h3 className="mt-[10px] md:mt-[20px]">Reading</h3>
@@ -89,6 +89,16 @@ export default function Home() {
                  Lights Out: Pride, Delusion, and the Fall of General Electric
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://amzn.to/46me39G"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                 Red Queen
+                </a>
+              </li>
              
               
             </ul>
@@ -102,6 +112,46 @@ export default function Home() {
               >
             <li>
                 <a
+                  href="https://amzn.to/44f1RFB"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                 Outlive: The Science and Art of Longevity
+                </a>
+              </li>
+            <li>
+                <a
+                  href="https://amzn.to/3pdP9Z9"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                 Guns, Germs, and Steel: The Fates of Human Societies
+                </a>
+              </li>
+            <li>
+                <a
+                  href="https://amzn.to/3PtggKr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                 To Sell Is Human: The Surprising Truth About Moving Others
+                </a>
+              </li>
+            <li>
+                <a
+                  href="https://amzn.to/3NJM6B5"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                 Influence: The Psychology of Persuasion
+                </a>
+              </li>
+            <li>
+                <a
                   href="https://amzn.to/3DTiAV3"
                   target="_blank"
                   rel="noreferrer"
@@ -110,6 +160,7 @@ export default function Home() {
                   Ikigai: The Japanese Secret to a Long and Happy Life
                 </a>
               </li>
+                
                 </ul>
 
 
