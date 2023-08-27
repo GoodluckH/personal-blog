@@ -11,6 +11,9 @@
     "generate:rss": "node scripts/rss.mjs",
     "prebuild": "npm run generate:rss"
   },
+  "engines": {
+    "node": "19.x"
+  },
   "dependencies": {
     "@headlessui/react": "^1.6.1",
     "@types/react": "^17.0.38",
