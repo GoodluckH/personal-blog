@@ -55,7 +55,7 @@ export default function BlogSlug({ code, frontMatter }) {
                 Date : {frontMatter.publishedAt}
               </p>
             </div>
-            <div className="overflow-hidden">
+           {frontMatter.image && <div className="overflow-hidden">
               <Image
                 priority
                 src={frontMatter.image}
@@ -66,10 +66,10 @@ export default function BlogSlug({ code, frontMatter }) {
                 alt="cover image"
                 className="dark:brightness-90 rounded-xl"
               />
-              <figcaption>
+              {caption && <figcaption>
                 <Markup content={caption} />
-              </figcaption>
-            </div>
+              </figcaption>}
+            </div>}
           </div>
           <article>
             <Component components={{ ...MDXComponent }} />

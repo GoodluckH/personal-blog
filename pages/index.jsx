@@ -109,16 +109,11 @@ export default function Home({ allPostsData }) {
             , I am in San Francisco, CA
           </p>
 
-          {/*Projects section*/}
-          <section className="mt-[50px] md:mt-[80px]">
-            <h2>Projects</h2>
-            <ProjectGrid projects={projects} />
-          </section>
 
           <section className="mt-[50px] md:mt-[80px]">
             <h2>Blog posts</h2>
             <section className="mt-[20px] mb-[40px] md:mt-[20px] md:mb-[40px]">
-            <Subscribe />
+        
           </section>
             {allPostsData.map((post) => {
               if (!post.draft && !post.chinese) {
@@ -151,6 +146,17 @@ export default function Home({ allPostsData }) {
                 )
               }
             })}
+        <section className='mt-[30px]'>
+        <Subscribe />
+        </section>
+
+
+          {/*Projects section*/}
+          <section className="mt-[50px] md:mt-[80px]">
+            <h2>Projects</h2>
+            <ProjectGrid projects={projects} />
+          </section>
+
           </section>
         </div>
       </div>
