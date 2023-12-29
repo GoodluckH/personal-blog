@@ -25,7 +25,7 @@ export default function Home() {
           />
         )}
       </Head>
-      <div className="max-w-4xl  mt-[4rem]  bg-black">
+      <div className="max-w-4xl  mt-[10rem] bg-black  -mr-2 sm:mr-0">
 <div className='bg-rose-300 border-black border-2 px-5 -translate-x-2 -translate-y-2'>    <div>
           <h2 className="text-gray-900 dark:text-white">
             <span className="text-4xl font-black">Now</span>

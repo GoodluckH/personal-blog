@@ -56,8 +56,8 @@ export default function Home({ allPostsData }) {
       </Head>
       <div className="bg-purple-500 pt-[10rem]">
         {/** my description and intro */}
-        <div className='max-w-4xl bg-black'>
-          <div className='border-2 border-black -translate-x-3 -translate-y-3 bg-white'>
+        <div className='max-w-4xl bg-black -mr-2 sm:mr-0'>
+          <div className='border-2 border-black -translate-x-2 -translate-y-2 sm:-translate-x-3 sm:-translate-y-3 bg-white'>
           <section className='bg-cyan-500 px-5 py-5 border-b-2 border-black'>
           <h2 className="text-gray-900 dark:text-white">
             <span className="text-4xl font-black">
