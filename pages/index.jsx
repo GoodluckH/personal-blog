@@ -5,13 +5,24 @@ import useDarkMode from '../lib/useDarkMode'
 import ProjectGrid from '../components/ProjectGrid'
 import projects from '../data/projects.json'
 import Subscribe from '../components/Subscribe'
+import React, { useState } from 'react'
+
+const COLORS_BY_YEAR = {
+  2022: 'sky-500',
+  2023: 'sky-500',
+  2024: 'amber-500',
+}
+
 export default function Home({ allPostsData }) {
   const [darkMode] = useDarkMode()
+  const [postPage, setPostPage] = useState(1)
+  const PAGINATION = 5
   return (
     <>
       <Head>
         <title>Xipu Li</title>
         <meta name="description" content="Xipu Li's personal website" />
+      
         {darkMode ? (
           <link
             rel="icon"
@@ -41,16 +52,19 @@ export default function Home({ allPostsData }) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        
       </Head>
-      <div className="space-y-24 max-w-4xl px-5">
+      <div className="bg-purple-500 pt-[10rem]">
         {/** my description and intro */}
-        <div>
+        <div className='max-w-4xl bg-black'>
+          <div className='border-2 border-black -translate-x-3 -translate-y-3 bg-white'>
+          <section className='bg-cyan-500 px-5 py-5 border-b-2 border-black'>
           <h2 className="text-gray-900 dark:text-white">
-            <span className="text-2xl md:text-3xl">
-              👋 Hi, I&apos;m <b>Xipu</b>
+            <span className="text-4xl font-black">
+            Xipu Li
             </span>
           </h2>
-          <ul role="list" className="text-lg md:text-xl">
+          <ul role="list" className="text-lg md:text-xl font-semibold">
             <li>
               born in{' '}
               <a
@@ -90,7 +104,6 @@ export default function Home({ allPostsData }) {
                 a sci-fi book
               </a>
             </li>
-            <li>studied finance at Fordham University</li>
             <li>
               <a
                 href="https://moicandroic.home.blog/"
@@ -102,70 +115,82 @@ export default function Home({ allPostsData }) {
               and invested in public equity
             </li>
           </ul>
-          <p className="py-1 text-slate-900 dark:text-gray-300 text-lg md:text-xl">
+          <p className="py-1 text-slate-900 font-bold text-lg md:text-xl">
             <Link href={'/now/'}>
-              <a>Now</a>
+              <a>now</a>
             </Link>
-            , I am in San Francisco, CA
+            , I am building a consumer startup in San Francisco, CA
           </p>
-
-
-          <section className="mt-[50px] md:mt-[80px]">
-            <h2>Blog posts</h2>
-            <section className="mt-[20px] mb-[40px] md:mt-[20px] md:mb-[40px]">
-        
           </section>
-            {allPostsData.map((post) => {
+
+          <section className="pt-[50px]  px-5 py-5  bg-pink-300">
+            <h1 className="text-4xl font-black mb-2">Writings</h1>
+        
+            {allPostsData.
+            sort((a, b) => {
+              if (a.publishedAt > b.publishedAt) {
+                return -1
+              } else {
+                return 1
+              }
+            } ).
+            slice(0, postPage * PAGINATION).
+            map((post) => {
               if (!post.draft && !post.chinese) {
                 return (
                   <div
-                    className="mt-5 border-l-[4px] md:border-l-[7px] border-sky-200"
+                    className={`mb-10 bg-black rounded-xl`}
                     key={post.slug}
                   >
-                    <div className="pl-5">
-                      <h2 className="text-xl md:text-2xl pt-0">
-                        <Link href={`/posts/${post.slug}`}>
-                          <a> {post.title} </a>
-                        </Link>
+                    <Link href={`/posts/${post.slug}`}>
+                    <div className="border-2 border-black rounded-xl p-4 bg-yellow-500 hover:-translate-y-2 hover:-translate-x-2 hover:cursor-pointer active:translate-x-0 active:translate-y-0 transition duration-100 ease-in-out"
+
+                    >
+                      <h2 className="text-xl md:text-2xl pt-0 font-bold">
+                          {post.title} 
                       </h2>
 
                       <div className="flex items-center space-x-3">
-                        <p className="px-3 py-1 text-sm font-medium text-sky-500 bg-gray-100 dark:bg-slate-200 rounded-full">
+                        <p className={`border-black border-2 bg-lime-400 text-black px-3 py-1 text-sm font-bold rounded-full`}>
                           {post.readingTime.text}
                         </p>
-                        <p className="px-3 py-1 text-sm font-medium text-sky-500 bg-gray-100 dark:bg-slate-200 rounded-full">
+                        <p className={`border-black border-2 bg-lime-400 text-black px-3 py-1 text-sm font-bold rounded-full`}>
                           {post.publishedAt}
                         </p>
                       </div>
 
-                      <p className="text-base italic pt-3 dark:text-gray-300">
+                      <p className="text-base italic pt-3 dark:text-gray-300 font-semibold">
                         {post.summary}
                       </p>
                     </div>
+                    </Link>
+
                   </div>
                 )
               }
             })}
-        <section className='mt-[30px]'>
-        <Subscribe />
-        </section>
-
+            {postPage * PAGINATION < allPostsData.length && (
+              <button
+                className="mt-5 text-gray-900 dark:text-white"
+                onClick={() => setPostPage(postPage + 1)}
+              >
+                Load More
+              </button>
+            )}
+      
 
           {/*Projects section*/}
-          <section className="mt-[50px] md:mt-[80px]">
-            <h2>Projects</h2>
-            <ProjectGrid projects={projects} />
-          </section>
+     
 
-          </section>
-        </div>
+          </section>      
+            </div>
+          </div>
       </div>
     </>
   )
 }
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
-  console.log(allPostsData.length)
   return {
     props: {
       allPostsData,

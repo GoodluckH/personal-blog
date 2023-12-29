@@ -8,7 +8,7 @@ export default function SocialIcons() {
         className="hover:bg-transparent"
       >
         <svg
-          className="w-6 h-6 text-gray-800 dark:text-gray-200 fill-current hover:text-sky-500 dark:hover:text-sky-500"
+          className="w-6 h-6 text-black dark:text-gray-200 fill-current hover:text-yellow-500 dark:hover:text-sky-500"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -23,7 +23,7 @@ export default function SocialIcons() {
         className="hover:bg-transparent"
       >
         <svg
-          className="w-6 h-6 text-gray-800 dark:text-gray-200 fill-current hover:text-sky-500 dark:hover:text-sky-500"
+          className="w-6 h-6 text-black dark:text-gray-200 fill-current hover:text-yellow-500 dark:hover:text-sky-500"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -38,7 +38,7 @@ export default function SocialIcons() {
         className="hover:bg-transparent"
       >
         <svg
-          className="w-6 h-6 text-gray-800 dark:text-gray-200 fill-current hover:text-sky-500 dark:hover:text-sky-500"
+          className="w-6 h-6 text-black dark:text-gray-200 fill-current hover:text-yellow-500 dark:hover:text-sky-500"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >

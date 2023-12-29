@@ -25,51 +25,55 @@ export default function Home() {
           />
         )}
       </Head>
-      <div className="space-y-24 max-w-4xl px-5">
-        {/** my description and intro */}
-        <div>
+      <div className="max-w-4xl  mt-[4rem]  bg-black">
+<div className='bg-rose-300 border-black border-2 px-5 -translate-x-2 -translate-y-2'>    <div>
           <h2 className="text-gray-900 dark:text-white">
-            <span className="text-2xl md:text-3xl">Now</span>
+            <span className="text-4xl font-black">Now</span>
           </h2>
-          <h4 className="text-gray-500 dark:text-gray-400">
+          <h4 className="text-black">
             <span className="text-base italic md:text-md">
-              As of June 23, 2023
+              As of Dec 28, 2023
             </span>
           </h4>
-          <section className="mt-[10px] md:mt-[10px]">
-            <h3 className="mt-[10px] md:mt-[20px]">San Francisco, CA</h3>
-            <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              I am interning at Amazon as a Software Development Engineer with the FireTV Appstore team.
+          <section className="mt-[10px] md:mt-[10px] font-semibold">
+            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">San Francisco, CA</h3>
+            <p className="pt-2 text-base sm:text-lg ">
+              Attending school and building a startup.
             </p>
 
-            <h3 className="mt-[10px] md:mt-[20px]">VTOL</h3>
-            <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              I am actively involved in and contributing to a{' '}
-              <a href="https://arrowair.com/" target="_blank" rel="noreferrer">
-                DAO
-              </a>{' '}
-              that aims to make{' '}
-              <a
-                href="https://en.wikipedia.org/wiki/VTOL"
-                target="_blank"
-                rel="noreferrer"
-              >
-                VTOL
-              </a>{' '}
-              rideshare accessible to everyone (think Uber for flying cars).
+
+            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">Forget</h3>
+            <p className="pt-2 text-base sm:text-lg text-black">
+              I&#39;m building a <a href="https://forget.work" target="_blank" rel="noreferrer">productivity tool</a> that helps people with ADHD focus at work.
             </p>
 
-            <h3 className="mt-[10px] md:mt-[20px]">Complish</h3>
-            <p className="pt-2 text-base sm:text-lg text-slate-600 dark:text-slate-200">
-              I&#39;m building am <a href="https:/complish.ai" target="_blank" rel="noreferrer">app</a> that uses AI to generate personalized motivational speeches.
-            </p>
-
-            <h3 className="mt-[10px] md:mt-[20px]">Reading</h3>
+            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">Reading</h3>
             <ul
               role="list"
               className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
             >
               <li>
+                <a
+                  href="https://amzn.to/3S0ABaS"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                  Six of Crows
+                </a>
+              </li>
+      
+            </ul>
+            <h2></h2>
+
+            <ExpandableCard title="Book Shelf">
+            <h3 className="mt-[10px] md:mt-[20px]">2023</h3>
+
+              <ul
+                role="list"
+                className="text-base sm:text-lg"
+              >
+                   <li>
                 <a
                   href="https://amzn.to/3UbUyup"
                   target="_blank"
@@ -100,16 +104,6 @@ export default function Home() {
                 </a>
               </li>
              
-              
-            </ul>
-            <h2></h2>
-
-            <ExpandableCard title="Book Shelf">
-            <h3 className="mt-[10px] md:mt-[20px]">2023</h3>
-              <ul
-                role="list"
-                className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
-              >
             <li>
                 <a
                   href="https://amzn.to/44f1RFB"
@@ -523,7 +517,7 @@ export default function Home() {
             </ExpandableCard>
           </section>
 
-          <p className="pt-10 italic text-sm sm:text-sm text-slate-500 dark:text-slate-500">
+          <p className="pt-10 italic text-sm sm:text-sm text-slate-8 mb-5">
             Inspired by{' '}
             <a
               href="https://www.natecation.com/"
@@ -542,7 +536,8 @@ export default function Home() {
             </a>{' '}
             page.
           </p>
-        </div>
+        </div></div>
+    
       </div>
     </>
   )

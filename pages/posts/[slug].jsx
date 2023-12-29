@@ -30,7 +30,7 @@ export default function BlogSlug({ code, frontMatter }) {
           />
         )}
       </Head>
-      <div className="flex max-w-6xl mx-auto">
+      <div className="flex max-w-6xl mx-auto bg-rose-200 pt-[7rem] border-2 border-black">
         <div className="flex flex-col max-w-4xl px-5 mx-auto space-y-10">
           <div className="flex flex-col mt-25 space-y-7">
             {frontMatter.draft ? (
@@ -44,14 +44,14 @@ export default function BlogSlug({ code, frontMatter }) {
               <></>
             )}
             <h1>{frontMatter.title}</h1>
-            <p className="text-xl text-gray-500 dark:text-gray-400">
+            <p className="text-xl text-gray-800">
               {frontMatter.summary}
             </p>
             <div className="flex items-center space-x-3">
-              <p className="px-3 py-1 text-sm font-medium text-sky-500 bg-gray-100 dark:bg-slate-200 rounded-full">
+              <p className="px-3 py-1 text-sm font-medium border-2 border-black bg-lime-400 text-black rounded-full">
                 {frontMatter.readingTime.text}
               </p>
-              <p className="px-3 py-1 text-sm font-medium text-sky-500 bg-gray-100 dark:bg-slate-200 rounded-full">
+              <p className="px-3 py-1 text-sm font-medium border-2 border-black bg-lime-400 text-black rounded-full">
                 Date : {frontMatter.publishedAt}
               </p>
             </div>
@@ -64,14 +64,14 @@ export default function BlogSlug({ code, frontMatter }) {
                 layout="responsive"
                 objectFit="cover"
                 alt="cover image"
-                className="dark:brightness-90 rounded-xl"
+                className="rounded-xl border-2 border-black"
               />
-              {caption && <figcaption>
+              {caption && <figcaption className='text-black'>
                 <Markup content={caption} />
               </figcaption>}
             </div>}
           </div>
-          <article>
+          <article className='font-semibold'>
             <Component components={{ ...MDXComponent }} />
           </article>
           <hr />

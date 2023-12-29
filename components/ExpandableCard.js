@@ -7,27 +7,22 @@ export default function ExpandableCard(props) {
   const [expanded, setExpanded] = useState(false)
 
   return (
-    <div className="bg-gray-50 border-gray-300 dark:border-slate-500 border-[2px] rounded-xl p-3 text-left drop-shadow-sm dark:bg-slate-800">
+    <div className="bg-cyan-500 rounded-xl border-black border-2 p-3 text-left">
       <button className="w-full" onClick={() => setExpanded(!expanded)}>
         <div className="flex justify-between px-2 items-center">
-          <p className="font-medium text-base md:text-xl text-gray-600 dark:text-slate-300">
+          <p className="text-base md:text-xl text-black font-bold">
             {props.title}
           </p>
           <IconContext.Provider
             value={{
-              className:
-                'text-xl md:text-3xl font-heavy text-gray-600 dark:text-slate-300',
+              className: 'text-xl md:text-3xl font-bold text-black',
             }}
           >
             {expanded ? <MdExpandLess /> : <MdExpandMore />}
           </IconContext.Provider>
         </div>
       </button>
-      {expanded && (
-        <div className="pt-2 px-2 text-gray-500 dark:text-slate-400">
-          {props.children}
-        </div>
-      )}
+      {expanded && <div className="pt-2 px-2 text-black">{props.children}</div>}
     </div>
   )
 }
