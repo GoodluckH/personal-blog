@@ -76,7 +76,7 @@ export default function Home({ allPostsData }) {
               </a>
               , a city in Henan, China{' '}
             </li>
-            <li>
+            {/* <li>
               went to high school in{' '}
               <a
                 href="https://www.archbishopryan.com/"
@@ -93,7 +93,7 @@ export default function Home({ allPostsData }) {
               >
                 Oakland
               </a>
-            </li>
+            </li> */}
             <li>
               wrote and self-published{' '}
               <a
@@ -113,6 +113,15 @@ export default function Home({ allPostsData }) {
                 wrote about
               </a>{' '}
               and invested in public equity
+            </li>
+            <li>
+            <a
+                href="https://xipu.substack.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                more writings
+              </a>
             </li>
           </ul>
           <p className="py-1 text-slate-900 font-bold text-lg md:text-xl">
