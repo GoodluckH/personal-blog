@@ -134,7 +134,7 @@ export default function Home({ allPostsData }) {
               data-test-id="beehiiv-embed"
               width="100%"
               height="320"
-              frameborder="0"
+              frameBorder="0"
               style={{
                 borderRadius: '4px',
                 border: '2px solid #e5e7eb',
