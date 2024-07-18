@@ -22,7 +22,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>Xipu Li</title>
         <meta name="description" content="Xipu Li's personal website" />
-      
+
         {darkMode ? (
           <link
             rel="icon"
@@ -52,31 +52,28 @@ export default function Home({ allPostsData }) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        
       </Head>
       <div className="bg-purple-500 pt-[10rem]">
         {/** my description and intro */}
-        <div className='max-w-4xl bg-black -mr-2 sm:mr-0'>
-          <div className='border-2 border-black -translate-x-2 -translate-y-2 sm:-translate-x-3 sm:-translate-y-3 bg-white'>
-          <section className='bg-cyan-500 px-5 py-5 border-b-2 border-black'>
-          <h2 className="text-gray-900 dark:text-white">
-            <span className="text-4xl font-black">
-            Xipu Li
-            </span>
-          </h2>
-          <ul role="list" className="text-lg md:text-xl font-semibold">
-            <li>
-              born in{' '}
-              <a
-                href="https://en.wikipedia.org/wiki/Zhumadian"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Zhumadian
-              </a>
-              , a city in Henan, China{' '}
-            </li>
-            {/* <li>
+        <div className="max-w-4xl bg-black -mr-2 sm:mr-0">
+          <div className="border-2 border-black -translate-x-2 -translate-y-2 sm:-translate-x-3 sm:-translate-y-3 bg-white">
+            <section className="bg-cyan-500 px-5 py-5 border-b-2 border-black">
+              <h2 className="text-gray-900 dark:text-white">
+                <span className="text-4xl font-black">Xipu Li</span>
+              </h2>
+              <ul role="list" className="text-lg md:text-xl font-semibold">
+                <li>
+                  born in{' '}
+                  <a
+                    href="https://en.wikipedia.org/wiki/Zhumadian"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Zhumadian
+                  </a>
+                  , a city in Henan, China{' '}
+                </li>
+                {/* <li>
               went to high school in{' '}
               <a
                 href="https://www.archbishopryan.com/"
@@ -94,106 +91,118 @@ export default function Home({ allPostsData }) {
                 Oakland
               </a>
             </li> */}
-            <li>
-              wrote and self-published{' '}
-              <a
-                href="https://www.google.com/search?sxsrf=APq-WBty9ezcwY-ZvGwsNUu3FwiIfzqkmw:1644460579880&q=The+Imperium:+Empires+in+a+Fissure+Xipu+Li&stick=H4sIAAAAAAAAAOPgE-LVT9c3NEyJt0yPN62qUIJw0y3KLeJTinK0pLKTrfST8vOz9RNLSzLyi6xA7GKF_LycykWsWiEZqQqeuQWpRZmluVYKrrkFmUWpxQqZeQqJCm6ZxcWlRakKEZkFpQo-mTtYGQGb87a7bAAAAA&sa=X&ved=2ahUKEwiVydeFjfT1AhW4kokEHR4MCMEQmxMoAXoECB4QAw&biw=1299&bih=947&dpr=1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                a sci-fi book
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://moicandroic.home.blog/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                wrote about
-              </a>{' '}
-              and invested in public equity
-            </li>
-            <li>
-            <a
-                href="https://xipu.substack.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                more writings
-              </a>
-            </li>
-          </ul>
-          <p className="py-1 text-slate-900 font-bold text-lg md:text-xl">
-            <Link href={'/now/'}>
-              <a>now</a>
-            </Link>
-            , I am building a consumer startup in San Francisco, CA
-          </p>
-          </section>
-
-          <section className="pt-[50px]  px-5 py-5  bg-pink-300">
-            <h1 className="text-4xl font-black mb-2">Writings</h1>
-        
-            {allPostsData.
-            sort((a, b) => {
-              if (a.publishedAt > b.publishedAt) {
-                return -1
-              } else {
-                return 1
-              }
-            } ).
-            slice(0, postPage * PAGINATION).
-            map((post) => {
-              if (!post.draft && !post.chinese) {
-                return (
-                  <div
-                    className={`mb-10 bg-black rounded-xl`}
-                    key={post.slug}
+                <li>
+                  wrote and self-published{' '}
+                  <a
+                    href="https://www.google.com/search?sxsrf=APq-WBty9ezcwY-ZvGwsNUu3FwiIfzqkmw:1644460579880&q=The+Imperium:+Empires+in+a+Fissure+Xipu+Li&stick=H4sIAAAAAAAAAOPgE-LVT9c3NEyJt0yPN62qUIJw0y3KLeJTinK0pLKTrfST8vOz9RNLSzLyi6xA7GKF_LycykWsWiEZqQqeuQWpRZmluVYKrrkFmUWpxQqZeQqJCm6ZxcWlRakKEZkFpQo-mTtYGQGb87a7bAAAAA&sa=X&ved=2ahUKEwiVydeFjfT1AhW4kokEHR4MCMEQmxMoAXoECB4QAw&biw=1299&bih=947&dpr=1"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <Link href={`/posts/${post.slug}`}>
-                    <div className="border-2 border-black rounded-xl p-4 bg-yellow-500 hover:-translate-y-2 hover:-translate-x-2 hover:cursor-pointer active:translate-x-0 active:translate-y-0 transition duration-100 ease-in-out"
+                    a sci-fi book
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://moicandroic.home.blog/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    wrote about
+                  </a>{' '}
+                  and invested in public equity
+                </li>
+                <li>
+                  <a
+                    href="https://letter.xipu.li/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    more writings
+                  </a>
+                </li>
+              </ul>
+              <p className="py-1 text-slate-900 font-bold text-lg md:text-xl">
+                <Link href={'/now/'}>
+                  <a>now</a>
+                </Link>
+                , I am building a consumer startup in San Francisco, CA
+              </p>
+            </section>
 
-                    >
-                      <h2 className="text-xl md:text-2xl pt-0 font-bold">
-                          {post.title} 
-                      </h2>
+            <iframe
+              src="https://embeds.beehiiv.com/f6a777c5-a3a3-4f63-91f6-5c902b7cff3f"
+              data-test-id="beehiiv-embed"
+              width="100%"
+              height="320"
+              frameborder="0"
+              style={{
+                borderRadius: '4px',
+                border: '2px solid #e5e7eb',
+                margin: '0',
+                backgroundColor: '#FC05B0',
+              }}
+            ></iframe>
 
-                      <div className="flex items-center space-x-3">
-                        <p className={`border-black border-2 bg-lime-400 text-black px-3 py-1 text-sm font-bold rounded-full`}>
-                          {post.readingTime.text}
-                        </p>
-                        <p className={`border-black border-2 bg-lime-400 text-black px-3 py-1 text-sm font-bold rounded-full`}>
-                          {post.publishedAt}
-                        </p>
+            <section className="pt-[50px]  px-5 py-5  bg-pink-300">
+              <h1 className="text-4xl font-black mb-2">Writings</h1>
+
+              {allPostsData
+                .sort((a, b) => {
+                  if (a.publishedAt > b.publishedAt) {
+                    return -1
+                  } else {
+                    return 1
+                  }
+                })
+                .slice(0, postPage * PAGINATION)
+                .map((post) => {
+                  if (!post.draft && !post.chinese) {
+                    return (
+                      <div
+                        className={`mb-10 bg-black rounded-xl`}
+                        key={post.slug}
+                      >
+                        <Link href={`/posts/${post.slug}`}>
+                          <div className="border-2 border-black rounded-xl p-4 bg-yellow-500 hover:-translate-y-2 hover:-translate-x-2 hover:cursor-pointer active:translate-x-0 active:translate-y-0 transition duration-100 ease-in-out">
+                            <h2 className="text-xl md:text-2xl pt-0 font-bold">
+                              {post.title}
+                            </h2>
+
+                            <div className="flex items-center space-x-3">
+                              <p
+                                className={`border-black border-2 bg-lime-400 text-black px-3 py-1 text-sm font-bold rounded-full`}
+                              >
+                                {post.readingTime.text}
+                              </p>
+                              <p
+                                className={`border-black border-2 bg-lime-400 text-black px-3 py-1 text-sm font-bold rounded-full`}
+                              >
+                                {post.publishedAt}
+                              </p>
+                            </div>
+
+                            <p className="text-base italic pt-3 dark:text-gray-300 font-semibold">
+                              {post.summary}
+                            </p>
+                          </div>
+                        </Link>
                       </div>
+                    )
+                  }
+                })}
+              {postPage * PAGINATION < allPostsData.length && (
+                <button
+                  className="mt-5 text-gray-900 dark:text-white"
+                  onClick={() => setPostPage(postPage + 1)}
+                >
+                  Load More
+                </button>
+              )}
 
-                      <p className="text-base italic pt-3 dark:text-gray-300 font-semibold">
-                        {post.summary}
-                      </p>
-                    </div>
-                    </Link>
-
-                  </div>
-                )
-              }
-            })}
-            {postPage * PAGINATION < allPostsData.length && (
-              <button
-                className="mt-5 text-gray-900 dark:text-white"
-                onClick={() => setPostPage(postPage + 1)}
-              >
-                Load More
-              </button>
-            )}
-      
-
-          {/*Projects section*/}
-     
-
-          </section>      
-            </div>
+              {/*Projects section*/}
+            </section>
           </div>
+        </div>
       </div>
     </>
   )
