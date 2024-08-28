@@ -36,9 +36,9 @@ export default function Home() {
             </span>
           </h4>
           <section className="mt-[10px] md:mt-[10px] font-semibold">
-            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">San Francisco, CA</h3>
+            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">Amazon</h3>
             <p className="pt-2 text-base sm:text-lg ">
-              Attending school and building a startup.
+              I&apos;m working as a Software Development Engineer at Amazon.
             </p>
 
 
@@ -54,6 +54,47 @@ export default function Home() {
             >
               <li>
                 <a
+                  href="https://amzn.to/4dC7bIv"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                  Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley
+                </a>
+              </li>
+         
+            </ul>
+            <h2></h2>
+
+            <ExpandableCard title="Book Shelf">
+            <h3 className="mt-[10px] md:mt-[20px]">2024</h3>
+            <ul
+                role="list"
+                className="text-base sm:text-lg"
+              >
+            
+            <li>
+                <a
+                  href="https://amzn.to/3AzU3on"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+The Algebra of Wealth: A Simple Formula for Financial Security               
+ </a>
+              </li>
+            <li>
+                <a
+                  href="https://amzn.to/4dY8iBL"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                  Disrupted: Ludicrous Misadventures in the Tech Start-up Bubble
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://amzn.to/3S0ABaS"
                   target="_blank"
                   rel="noreferrer"
@@ -62,11 +103,29 @@ export default function Home() {
                   Six of Crows
                 </a>
               </li>
-      
-            </ul>
-            <h2></h2>
+              <li>
+                <a
+                  href="https://amzn.to/4g2pQhV"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead                </a>
+              </li>
+              <li>
+                <a
+                  href="https://amzn.to/3XmxJrt"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+Status and Culture: How Our Desire for Social Rank Creates Taste, Identity, Art, Fashion, and Constant Change             
+</a>
+ </li>
 
-            <ExpandableCard title="Book Shelf">
+                </ul>
+            
+
             <h3 className="mt-[10px] md:mt-[20px]">2023</h3>
 
               <ul
