@@ -32,7 +32,7 @@ export default function Home() {
           </h2>
           <h4 className="text-black">
             <span className="text-base italic md:text-md">
-              As of Dec 28, 2023
+              As of Sep 22, 2024
             </span>
           </h4>
           <section className="mt-[10px] md:mt-[10px] font-semibold">
@@ -52,14 +52,25 @@ export default function Home() {
               role="list"
               className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
             >
+            
               <li>
                 <a
-                  href="https://amzn.to/4dC7bIv"
+                  href="https://amzn.to/4eckvn6"
                   target="_blank"
                   rel="noreferrer"
                   className="italic"
                 >
-                  Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley
+                  Grinding It Out: The Making of McDonald&#39;s
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://amzn.to/4dfip4n"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                  Caste: The Origins of Our Discontents
                 </a>
               </li>
          
@@ -72,6 +83,26 @@ export default function Home() {
                 role="list"
                 className="text-base sm:text-lg"
               >
+                  <li>
+                <a
+                  href="https://amzn.to/3ZFO7EK"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                  Same as Ever: A Guide to What Never Changes
+                </a>
+              </li>
+                 <li>
+                <a
+                  href="https://amzn.to/4dC7bIv"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="italic"
+                >
+                  Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley
+                </a>
+              </li>
             
             <li>
                 <a

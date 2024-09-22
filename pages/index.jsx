@@ -125,7 +125,7 @@ export default function Home({ allPostsData }) {
                 <Link href={'/now/'}>
                   <a>now</a>
                 </Link>
-                , I am building a consumer startup in San Francisco, CA
+                , I am working as a Software Engineer at Amazon in Seattle, WA
               </p>
             </section>
 
