@@ -159,7 +159,7 @@ export default function Home({ allPostsData }) {
                   if (!post.draft && !post.chinese) {
                     return (
                       <div
-                        className={`mb-10 bg-black rounded-xl`}
+                        className={`mb-5 bg-black rounded-xl`}
                         key={post.slug}
                       >
                         <Link href={`/posts/${post.slug}`}>
