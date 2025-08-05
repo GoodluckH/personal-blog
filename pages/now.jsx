@@ -52,25 +52,24 @@ export default function Home() {
               role="list"
               className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
             >
-
               <li>
                 <a
-                  href="https://amzn.to/4eckvn6"
+                  href="https://amzn.to/4li1vpU"
                   target="_blank"
                   rel="noreferrer"
                   className="italic"
                 >
-                  Grinding It Out: The Making of McDonald&#39;s
+                  One Golden Summer
                 </a>
               </li>
               <li>
                 <a
-                  href="https://amzn.to/4dfip4n"
+                  href="https://amzn.to/4meaxp2"
                   target="_blank"
                   rel="noreferrer"
                   className="italic"
                 >
-                  Caste: The Origins of Our Discontents
+                  Sam Walton: Made In America
                 </a>
               </li>
 
@@ -78,6 +77,35 @@ export default function Home() {
             <h2></h2>
 
             <ExpandableCard title="Book Shelf">
+
+              <h3 className="mt-[10px] md:mt-[20px]">2025</h3>
+              <ul
+                role="list"
+                className="text-base sm:text-lg"
+              >
+                <li>
+                  <a
+                    href="https://amzn.to/4eckvn6"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Grinding It Out: The Making of McDonald&#39;s
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/4dfip4n"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Caste: The Origins of Our Discontents
+                  </a>
+                </li>
+
+              </ul>
+
               <h3 className="mt-[10px] md:mt-[20px]">2024</h3>
               <ul
                 role="list"
