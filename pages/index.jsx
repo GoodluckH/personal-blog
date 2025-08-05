@@ -111,7 +111,7 @@ export default function Home({ allPostsData }) {
                 <Link href={'/now/'}>
                   <a>now</a>
                 </Link>
-                , I'm a Founding Engineer at <a href="https://icon.com/" target="_blank" rel="noreferrer">Icon</a>
+                , I&apos;m a Founding Engineer at <a href="https://icon.com/" target="_blank" rel="noreferrer">Icon</a>
               </p>
             </section>
 
