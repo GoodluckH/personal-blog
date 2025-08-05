@@ -73,24 +73,10 @@ export default function Home({ allPostsData }) {
                   </a>
                   , a city in Henan, China{' '}
                 </li>
-                {/* <li>
-              went to high school in{' '}
-              <a
-                href="https://www.archbishopryan.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Philadelphia
-              </a>{' '}
-              and{' '}
-              <a
-                href="https://www.bishopodowd.org/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Oakland
-              </a>
-            </li> */}
+                <li>
+                  sold a <a href="https://www.forget.work" target="_blank" rel="noreferrer">company</a>
+                </li>
+
                 <li>
                   wrote and self-published{' '}
                   <a

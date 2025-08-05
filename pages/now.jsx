@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import ExpandableCard from '../components/ExpandableCard'
 // import styles from "../styles/Home.module.css";
-import timeGreeting from '../lib/time_based_greeting'
-
 import useDarkMode from '../lib/useDarkMode'
 
 export default function Home() {
