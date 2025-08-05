@@ -26,25 +26,25 @@ export default function Home() {
         )}
       </Head>
       <div className="max-w-4xl  mt-[10rem] bg-black  -mr-2 sm:mr-0">
-<div className='bg-rose-300 border-black border-2 px-5 -translate-x-2 -translate-y-2'>    <div>
+        <div className='bg-rose-300 border-black border-2 px-5 -translate-x-2 -translate-y-2'>    <div>
           <h2 className="text-gray-900 dark:text-white">
             <span className="text-4xl font-black">Now</span>
           </h2>
           <h4 className="text-black">
             <span className="text-base italic md:text-md">
-              As of Sep 22, 2024
+              As of Aug 5, 2025
             </span>
           </h4>
           <section className="mt-[10px] md:mt-[10px] font-semibold">
-            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">Amazon</h3>
+            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">Icon</h3>
             <p className="pt-2 text-base sm:text-lg ">
-              I&apos;m working as a Software Development Engineer at Amazon.
+              I&apos;m a Founding Engineer at <a href="https://icon.com/" target="_blank" rel="noreferrer">Icon</a>.
             </p>
 
 
-            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">Forget</h3>
+            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">ManUp</h3>
             <p className="pt-2 text-base sm:text-lg text-black">
-              I&#39;m building a <a href="https://forget.work" target="_blank" rel="noreferrer">productivity tool</a> that helps people with ADHD focus at work.
+              A <a href="https://manupgame.com" target="_blank" rel="noreferrer">dating game</a> that helps you get better at dating.
             </p>
 
             <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">Reading</h3>
@@ -52,7 +52,7 @@ export default function Home() {
               role="list"
               className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
             >
-            
+
               <li>
                 <a
                   href="https://amzn.to/4eckvn6"
@@ -73,179 +73,179 @@ export default function Home() {
                   Caste: The Origins of Our Discontents
                 </a>
               </li>
-         
+
             </ul>
             <h2></h2>
 
             <ExpandableCard title="Book Shelf">
-            <h3 className="mt-[10px] md:mt-[20px]">2024</h3>
-            <ul
+              <h3 className="mt-[10px] md:mt-[20px]">2024</h3>
+              <ul
                 role="list"
                 className="text-base sm:text-lg"
               >
-                  <li>
-                <a
-                  href="https://amzn.to/3ZFO7EK"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                  Same as Ever: A Guide to What Never Changes
-                </a>
-              </li>
-                 <li>
-                <a
-                  href="https://amzn.to/4dC7bIv"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                  Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley
-                </a>
-              </li>
-            
-            <li>
-                <a
-                  href="https://amzn.to/3AzU3on"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-The Algebra of Wealth: A Simple Formula for Financial Security               
- </a>
-              </li>
-            <li>
-                <a
-                  href="https://amzn.to/4dY8iBL"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                  Disrupted: Ludicrous Misadventures in the Tech Start-up Bubble
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://amzn.to/3S0ABaS"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                  Six of Crows
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://amzn.to/4g2pQhV"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead                </a>
-              </li>
-              <li>
-                <a
-                  href="https://amzn.to/3XmxJrt"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-Status and Culture: How Our Desire for Social Rank Creates Taste, Identity, Art, Fashion, and Constant Change             
-</a>
- </li>
+                <li>
+                  <a
+                    href="https://amzn.to/3ZFO7EK"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Same as Ever: A Guide to What Never Changes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/4dC7bIv"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley
+                  </a>
+                </li>
 
-                </ul>
-            
+                <li>
+                  <a
+                    href="https://amzn.to/3AzU3on"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    The Algebra of Wealth: A Simple Formula for Financial Security
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/4dY8iBL"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Disrupted: Ludicrous Misadventures in the Tech Start-up Bubble
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/3S0ABaS"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Six of Crows
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/4g2pQhV"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead                </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/3XmxJrt"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Status and Culture: How Our Desire for Social Rank Creates Taste, Identity, Art, Fashion, and Constant Change
+                  </a>
+                </li>
 
-            <h3 className="mt-[10px] md:mt-[20px]">2023</h3>
+              </ul>
+
+
+              <h3 className="mt-[10px] md:mt-[20px]">2023</h3>
 
               <ul
                 role="list"
                 className="text-base sm:text-lg"
               >
-                   <li>
-                <a
-                  href="https://amzn.to/3UbUyup"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                  The Rise of Theodore Roosevelt
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://amzn.to/3WqWj6J"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                 Lights Out: Pride, Delusion, and the Fall of General Electric
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://amzn.to/46me39G"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                 Red Queen
-                </a>
-              </li>
-             
-            <li>
-                <a
-                  href="https://amzn.to/44f1RFB"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                 Outlive: The Science and Art of Longevity
-                </a>
-              </li>
-            <li>
-                <a
-                  href="https://amzn.to/3pdP9Z9"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                 Guns, Germs, and Steel: The Fates of Human Societies
-                </a>
-              </li>
-            <li>
-                <a
-                  href="https://amzn.to/3PtggKr"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                 To Sell Is Human: The Surprising Truth About Moving Others
-                </a>
-              </li>
-            <li>
-                <a
-                  href="https://amzn.to/3NJM6B5"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                 Influence: The Psychology of Persuasion
-                </a>
-              </li>
-            <li>
-                <a
-                  href="https://amzn.to/3DTiAV3"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                  Ikigai: The Japanese Secret to a Long and Happy Life
-                </a>
-              </li>
-                
-                </ul>
+                <li>
+                  <a
+                    href="https://amzn.to/3UbUyup"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    The Rise of Theodore Roosevelt
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/3WqWj6J"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Lights Out: Pride, Delusion, and the Fall of General Electric
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/46me39G"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Red Queen
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://amzn.to/44f1RFB"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Outlive: The Science and Art of Longevity
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/3pdP9Z9"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Guns, Germs, and Steel: The Fates of Human Societies
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/3PtggKr"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    To Sell Is Human: The Surprising Truth About Moving Others
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/3NJM6B5"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Influence: The Psychology of Persuasion
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://amzn.to/3DTiAV3"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Ikigai: The Japanese Secret to a Long and Happy Life
+                  </a>
+                </li>
+
+              </ul>
 
 
               <h3 className="mt-[10px] md:mt-[20px]">2022</h3>
@@ -254,16 +254,16 @@ Status and Culture: How Our Desire for Social Rank Creates Taste, Identity, Art,
                 className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
               >
                 <li>
-                <a
-                  href="https://amzn.to/3SucSwY"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                  Onward: How Starbucks Fought for Its Life without Losing Its
-                  Soul
-                </a>
-              </li>
+                  <a
+                    href="https://amzn.to/3SucSwY"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic"
+                  >
+                    Onward: How Starbucks Fought for Its Life without Losing Its
+                    Soul
+                  </a>
+                </li>
                 <li>
                   <a
                     href="https://amzn.to/3Bu3vGW"
@@ -627,7 +627,7 @@ Status and Culture: How Our Desire for Social Rank Creates Taste, Identity, Art,
             page.
           </p>
         </div></div>
-    
+
       </div>
     </>
   )
