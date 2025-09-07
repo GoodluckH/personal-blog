@@ -30,7 +30,7 @@ export default function BlogSlug({ code, frontMatter }) {
           />
         )}
       </Head>
-      <div className="flex max-w-6xl mx-auto bg-rose-200 pt-[7rem] border-2 border-black">
+      <div className="flex max-w-6xl mx-auto bg-orange-100 pt-[7rem] border-2 border-black">
         <div className="flex flex-col max-w-4xl px-5 mx-auto space-y-10">
           <div className="flex flex-col mt-25 space-y-7">
             {frontMatter.draft ? (
@@ -55,7 +55,7 @@ export default function BlogSlug({ code, frontMatter }) {
                 Date : {frontMatter.publishedAt}
               </p>
             </div>
-           {frontMatter.image && <div className="overflow-hidden">
+            {frontMatter.image && <div className="overflow-hidden">
               <Image
                 priority
                 src={frontMatter.image}
@@ -71,7 +71,7 @@ export default function BlogSlug({ code, frontMatter }) {
               </figcaption>}
             </div>}
           </div>
-          <article className='font-semibold'>
+          <article className='leading-[1] tracking-tight'>
             <Component components={{ ...MDXComponent }} />
           </article>
           <hr />
