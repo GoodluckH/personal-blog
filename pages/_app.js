@@ -4,7 +4,7 @@ import '../styles/globals.css'
 import DarkModeContext from '../lib/dark_mode_context'
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }) {
   // const [darkMode, setDarkMode] = useState(false)
