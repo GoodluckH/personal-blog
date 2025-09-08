@@ -4,6 +4,7 @@ import '../styles/globals.css'
 import DarkModeContext from '../lib/dark_mode_context'
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
+import { Analytics } from '@vercel/analytics/next';
 
 function MyApp({ Component, pageProps }) {
   // const [darkMode, setDarkMode] = useState(false)
@@ -32,6 +33,7 @@ function MyApp({ Component, pageProps }) {
     // <DarkModeContext.Provider value={[darkMode, toggleDarkMode]}>
     <Layout>
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
     // </DarkModeContext.Provider>
   )
