@@ -1,6 +1,6 @@
 ---
 title: "The Last Programmers"
-draft: true
+draft: false
 publishedAt: "2025-09-07"
 summary: "We're witnessing the final generation of people who translate ideas into code by hand, and most don't realize it yet."
 author: "Xipu Li"
@@ -13,86 +13,125 @@ tags:
   - product
 ---
 
-I have a friend who can recite the periodic table from memory. Impressive party trick. Useless skill.
+My teammate hasn't looked at actual code in weeks. Instead, he writes design documents in plain English and trusts AI to handle the implementation. When something needs fixing, he edits the document, not the code.
 
-That's what happened to Latin scholars when printing presses made books abundant. That's what happened to human computers when machines took over arithmetic. And that's what's happening to programmers right now.
+This sounds weird today. It won't tomorrow.
 
-We're living through the last generation of people who translate ideas into code by hand.
+I've been watching this transition happen in real time on our team, and it's made me realize something profound: we're living through the end of an era. The era where humans translate ideas into code by hand. Within a few years, that skill will be as relevant as knowing how to shoe a horse.
 
-## The Great Compression
+## The Coming Compression
 
-Programming used to be a multi-step translation problem: 
+I keep telling people to trust capitalism on this one, and they look at me like I'm crazy. But think about the money flowing into AI development right now. Billions of dollars from the smartest investors in the world, all betting that AI coding will get dramatically better. Compute will get faster. Voice-to-code will become instant.
 
-Idea → Requirements → Architecture → Code → Testing → Deployment
+I've seen the trajectory firsthand. Every two months, there's a major model update that makes the previous version look primitive. Features that took our team hours now take minutes. Bugs that used to stump junior developers get fixed automatically before anyone even notices them.
 
-Each step required specialized knowledge. Each created opportunities for careers. Database administrators. QA engineers. DevOps specialists. An entire ecosystem of people who spoke different technical dialects.
+Picture building a product in that not-so-distant future. You sit down, describe what you want in plain English, and working software appears. No frameworks to learn. No deployment pipelines to configure. No late nights debugging obscure errors. The only friction between your idea and reality is how clearly you can explain what you want to build.
 
-AI is compressing this entire pipeline into something simpler:
+That changes everything about how products get made and who gets to make them.
 
-Idea → Code
+## What I'm Seeing Right Now
 
-Not metaphorically. Literally. At Icon, I watch engineers describe complex features in plain English and get working implementations back. The intermediate steps—the ones that employed millions of people—are evaporating.
+On our team, we're already living in this future, at least partially. I watch one of our best developers spend his entire day writing specifications in English, reviewing AI-generated code for maybe ten minutes, then shipping features that would have taken weeks just two years ago.
 
-## What Dies First
+The code itself has become an implementation detail, like the electrical wiring behind your drywall. You know it's there, you trust that it works, but you don't think about it unless something breaks. And increasingly, nothing breaks.
 
-The most mechanical parts of programming die first. The parts that follow patterns. The parts you could teach someone in a bootcamp.
+This developer isn't becoming less valuable. If anything, he's becoming more valuable because he can focus on the hard problems: figuring out what users actually need, designing systems that scale, making architectural decisions that will matter in two years. The tedious work of translating those decisions into working code is increasingly handled by machines.
 
-Junior developers, I'm sorry. Your market just collapsed. Companies don't need someone who can write CRUD operations when Claude can generate them perfectly in thirty seconds. They don't need someone to fix obvious bugs when AI can spot and patch them automatically.
+But here's what's happening to the junior developers on our team, and it's honestly uncomfortable to watch. The work they used to do—writing boilerplate code, implementing straightforward features, fixing obvious bugs—is evaporating. Not because they're bad at it, but because AI is becoming better at it, and faster, and it doesn't need coffee breaks.
 
-The cruel part? Coding bootcamps are still selling these skills like it's 2019. It's like teaching people to be telephone operators in 1995.
+I'm not saying junior developers will disappear entirely. But their role is changing so fundamentally that calling them "developers" might not even make sense soon.
 
-## What Survives
+## The Great Commoditization
 
-But here's the interesting part. Not everything dies.
+Here's what I think happens when building software becomes trivial: the entire game changes from "can we build this?" to "should we build this?" and "how do we get people to use it?"
 
-We built an automated media buying system. Pure AI managing ad campaigns. It burned through budgets like a drunk sailor. Terrible creative decisions. No understanding of market dynamics. A complete failure.
+I keep coming back to this chocolate bar analogy because it's so perfect. Anyone can learn to make chocolate. The ingredients are commoditized. The manufacturing process is well-understood. You can literally buy chocolate-making equipment on Amazon and start a brand tomorrow.
 
-Then we paired it with someone who'd managed $200M in Facebook ads. Someone who understood the psychology of different audiences. Someone who knew when to kill a creative before it fatigued. Someone who could smell when a market was about to shift.
+But look at who wins in the chocolate industry. It's not the people with the best manufacturing processes. It's Hershey's, Cadbury, Lindt—brands that figured out distribution, marketing, and customer psychology decades ago. The product quality matters, but it's table stakes. What matters is whether people know your brand exists and trust it enough to buy it.
 
-Suddenly, magic.
+Software is heading exactly the same direction. I can already see it happening. The gap between software products and consumer goods is shrinking every month. Both compete on branding, distribution, and understanding customer psychology rather than pure functionality.
 
-The AI handled the mechanical execution. The human provided what you can't Google: judgment earned through experience.
+I can already imagine—and I bet someone is building this right now—AI that can clone any app from a URL. You feed it a competitor's website or app store listing, and it spits out a functionally identical product in minutes. When that happens, and it will happen soon, the product itself becomes completely commoditized. Success depends entirely on whether you can market and distribute better than the original.
 
-This is Naval Ravikant's "specific knowledge"—the stuff you can't learn from books or bootcamps. The knowledge that comes from doing something for years until you develop intuitions that seem magical to outsiders.
+## The Split I'm Watching
+Something interesting is happening on our team right now, and I think it's a preview of how the entire industry will divide over the next few years.
 
-## The New Scarcity
+There are two camps emerging, and the difference isn't really about skill level or experience. It's about fundamental attitudes toward what programming should be.
 
-In a world where everyone can code, what becomes scarce?
+On one side, we have what I call the experimenters. These are people who spend their lunch breaks trying out new AI coding tools, setting up workflows that generate entire features from voice commands, and constantly pushing the boundaries of how little manual coding they can get away with. To traditionalists, they might look lazy. They're always looking for shortcuts, always asking "can AI do this for me?" instead of just buckling down and writing the code themselves.
 
-Taste. The ability to know what's worth building.
+But here's what I've realized watching them: they're not lazy. They're just following the natural path that technology has always followed. Every major advancement in programming has been about abstracting away complexity so humans can focus on higher-level problems. We moved from machine code to assembly to high-level languages to frameworks to libraries. Each step made things "easier" and each step had people complaining that developers were getting soft.
 
-Judgment. The ability to navigate ambiguous problems with incomplete information.
+These experimenters understand something fundamental: laziness wins in technology. The person who finds a way to accomplish the same result with less effort doesn't just make their own life better—they often discover the path that everyone else will eventually follow.
 
-Communication. The ability to translate messy human needs into precise technical requirements.
+On the other side, we have the guardians. These are people who believe deeply that understanding code at a fundamental level is non-negotiable. They can spot inefficient algorithms, they know why certain design patterns exist, they understand the underlying systems well enough to debug problems that AI tools can't handle. They see the experimenters as shortcuts artists who are building on shaky foundations.
 
-Domain expertise. Deep knowledge of how specific industries actually work.
+And honestly? They're not wrong. When the AI-generated code breaks in subtle ways, when performance becomes an issue, when edge cases emerge that the AI didn't anticipate, these are the people who can actually fix it. They have a depth of understanding that the experimenters often lack.
 
-These skills don't depreciate when AI gets better. They get more valuable.
+But here's what I think the guardians are missing: the world is changing faster than their gatekeeping can keep up with. The bar for "good enough" code keeps dropping while the bar for understanding users and building valuable products keeps rising. A slightly inefficient implementation that ships next week is often better than a perfectly optimized implementation that ships next month.
 
-## The False Prophets
+I watch these two groups work on the same problems, and it's fascinating. The experimenters ship faster, iterate more, and often end up with products that users prefer—even if the underlying code makes the guardians cringe. The guardians build more robust, maintainable systems, but they sometimes spend so much time perfecting the implementation that they miss opportunities to learn what users actually want.
 
-Don't listen to people telling you to "learn to code" in 2024. That's like telling someone to learn shorthand when everyone's switching to keyboards.
+Neither approach is completely right, but I have a prediction about which one wins in the long run. Technology trends toward convenience and abstraction. The tools get better, the AI gets smarter, and the "shortcuts" that look like cheating today become standard practice tomorrow.
 
-Don't listen to the people saying "AI will never replace programmers." They said the same thing about chess masters, radiologists, and translators. They were wrong then. They're wrong now.
+The experimenters aren't just being lazy. They're adapting to a world where the bottleneck isn't code quality—it's everything else.
 
-The question isn't whether AI will replace programmers. The question is which programmers will become irreplaceable.
+## The Coming Wave of Mediocre Products
 
-## What This Actually Means
+But here's where I think most people are getting this wrong. They assume that when anyone can build software, we'll suddenly have a golden age of amazing products. I think we're headed for the opposite: an explosion of technically perfect products that completely miss the mark.
 
-If you're a senior developer with deep domain knowledge, you're about to become incredibly valuable. You understand both the technical possibilities and the business realities. You can bridge the gap between what AI can build and what humans actually need.
+Most people, even smart people, can't design good products. I see this constantly in products built by brilliant engineers who focus purely on technical elegance. The software works flawlessly. The architecture is beautiful. The code is clean. And nobody uses it because it solves a problem that doesn't actually exist, or solves it in a way that makes no sense to normal humans.
 
-If you're a junior developer banking on pure technical skills, you need to pivot fast. Learn a domain. Get customer-facing experience. Develop taste. The window is closing.
+Remember Pied Piper from Silicon Valley? The compression algorithm was technically revolutionary, genuinely impressive to anyone who understood the computer science behind it. But the initial product was designed for an audience of exactly one: Richard Hendricks. It took the entire show for them to figure out how to make something that regular people might actually want to use.
 
-If you're building AI development tools, stop focusing on making code generation faster. Start focusing on making idea translation more precise. The bottleneck is moving from implementation to specification.
+That pattern is going to accelerate dramatically. When building becomes effortless, we'll see thousands of technically perfect products built by people who never talked to a customer, never validated a market, never asked whether the world actually needs another productivity app or social media platform or AI-powered whatever.
+
+The bottleneck won't be implementation. It will be knowing what's worth implementing and then convincing people to actually use it.
+
+## What Actually Survives
+
+After watching this transition up close, I'm convinced that three things become incredibly valuable when technical implementation gets commoditized:
+
+**Understanding what people actually need.** Not what they say they need in surveys or focus groups, but what they'll actually pay for and use every day. This is harder than it sounds. I've seen brilliant product managers get this wrong constantly. It requires talking to users, watching how they actually behave, understanding the gap between stated preferences and revealed preferences. It's part psychology, part anthropology, part business intuition.
+
+**Knowing what to build and what not to build.** This is taste, but it's also strategy. Understanding which features will create real value versus which will just add complexity. Recognizing when a product is good enough versus when it needs more polish. Seeing the difference between a feature users will try once and a feature they'll use every day. Most people are terrible at this. They either build everything anyone suggests or they build nothing because they can't decide what's important.
+
+**Getting products in front of the right people and convincing them to care.** Distribution and marketing, but also positioning, timing, and understanding customer psychology. Building trust and brand recognition. Creating word-of-mouth growth. Understanding how people discover new products and what motivates them to switch from existing solutions.
+
+These skills don't get automated away. If anything, they become more valuable as technical implementation becomes commoditized. Because when everyone can build software, the winners are the people who understand humans.
+
+## The New Game
+
+I think the future belongs to people who can bridge the gap between messy human needs and clean AI-implementable specifications. People who can talk to users, identify real problems, design solutions that actually work for those users, then communicate those solutions clearly enough that AI can build them.
+
+This isn't about learning to prompt AI better, though that will help. It's about developing the skills that were always the most important parts of building products: understanding markets, recognizing opportunities, communicating clearly, making good decisions under uncertainty.
+
+The junior developers on our team who are adapting well aren't learning new coding frameworks. They're spending time with customers, learning about the business, developing opinions about what makes products successful. They're becoming product thinkers who can work with AI tools rather than code writers who might get replaced by AI tools.
+
+## What This Means If You're Starting Out
+
+If you're learning to code today, please don't stop. But don't make coding your only skill. The developers who thrive in this new world will be the ones who understand users, markets, and business models as well as they understand technology.
+
+Spend time talking to people who use software. Not other developers—actual users. Learn what frustrates them about existing products. Understand how they discover new tools and what convinces them to adopt something new.
+
+Study successful products in industries you care about. Not just their features, but their go-to-market strategies. How did they get their first thousand users? How do they retain customers? What makes people recommend them to friends?
+
+Practice communicating complex ideas simply. The most valuable skill in an AI-assisted world might be the ability to translate fuzzy human problems into clear, implementable specifications.
+
+## What This Means If You're Already Building
+
+If you're already a developer or building a company, remember that your technical implementation will soon be replicable by anyone with access to good AI tools. Your competitive advantage needs to be something else.
+
+Better user understanding. Stronger distribution channels. Clearer market positioning. Faster learning cycles. Better taste in what to build. Superior execution on the parts that can't be automated—talking to customers, understanding their problems, iterating based on feedback.
+
+I keep coming back to this: the companies that win won't be the ones with the best code. They'll be the ones that understand their customers best and can get products in front of them most effectively.
 
 ## The Last Generation
 
-My kids won't learn to program the way I did. They won't memorize syntax or debug memory leaks. They'll learn to think clearly about problems and communicate those thoughts precisely to machines.
+We're the last generation of people who translate ideas into code by hand. Our children will describe what they want and watch it appear on screen, the same way we describe what we want to search engines and watch results appear.
 
-Programming as we know it—the careful translation of human intentions into machine instructions—is ending. What's beginning is something more interesting: the direct expression of human creativity through intelligent systems.
+They'll judge us the way we judge people who manually calculated ledgers before spreadsheets existed. Impressive dedication to craft, but ultimately unnecessary effort spent on problems that got solved by better tools.
 
-We're the last programmers in the traditional sense. Our children will be something else entirely.
+The question isn't whether this future arrives. Looking at the money and talent flowing into AI development, it's inevitable. The question is whether you'll be ready when it does, and whether you'll be working on the parts of product development that actually matter in that world.
 
-The transition will be brutal for some and liberating for others. The people who survive will be those who understand that coding was never the point.
-
-The point was always turning ideas into reality. Now we just have better tools.
+The parts that have always mattered, really. Understanding people. Building things they want. Getting those things in front of them. Everything else was just implementation details.
