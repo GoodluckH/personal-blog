@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    @apply bg-purple-500
+  @apply bg-purple-500
 }
 
 * {
@@ -33,7 +33,7 @@ body {
   }
 
   h1 {
-    @apply text-5xl md:text-6xl py-5 font-semibold;
+    @apply text-5xl md:text-4xl py-2 font-semibold;
   }
 
   h2 {
@@ -67,6 +67,7 @@ body {
   li {
     @apply py-1 text-slate-900 dark:text-gray-300;
   }
+
   pre {
     @apply py-2;
   }
