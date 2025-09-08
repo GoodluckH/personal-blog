@@ -13,17 +13,27 @@ tags:
   - product
 ---
 
-My teammate hasn't looked at actual code in weeks. Instead, he writes design documents in plain English and trusts AI to handle the implementation. When something needs fixing, he edits the document, not the code.
+I quit my job at Amazon in May to join a startup called Icon. Best career decision I ever made, but not for the reasons you might think.
+
+At Amazon, I was on the Amazon Q Developer team, building their AI coding assistant. You'd think being at the center of Amazon's AI developer tools would be exciting, but it was actually deeply frustrating. It was apparent to anyone outside the Amazon bubble that we were losing the AI game badly. The leadership was constantly playing catch-up because there was very little true product vision. They kept saying they wanted to move like a startup, but then had the risk tolerance of IBM.
+
+Everything took forever. AppSec reviews, design doc reviews, architectural review boards. By the time we shipped anything, companies like Cursor and Claude had already iterated through ten versions. We'd spend months debating whether a feature was safe enough to release while our competitors were shipping weekly updates based on actual user feedback.
+
+What really struck me was how Amazon's product decisions were driven by internal KPIs rather than user empathy. The most obvious example was authentication. GitHub auth is the standard for developer tools because it removes friction for the exact audience you're trying to serve. But Amazon insisted on funneling users through Builder ID, their own auth system. From an internal metrics perspective, it probably looked great (more Builder ID signups!). From a user perspective, it was just another barrier to trying the product. I watched potential users bounce off that requirement constantly.
+
+I felt like I was reaching the ceiling of what I could learn about AI and building good products within Amazon's constraints. That's why I joined Icon. At Icon, we move at a completely different speed. We ship features in days that would have taken Amazon months to approve.
+
+But that's not the interesting part. The interesting part is watching how my teammates work. One of them hasn't looked at actual code in weeks. Instead, he writes design documents in plain English and trusts AI to handle the implementation. When something needs fixing, he edits the document, not the code.
 
 This sounds weird today. It won't tomorrow.
 
-I've been watching this transition happen in real time on our team, and it's made me realize something profound: we're living through the end of an era. The era where humans translate ideas into code by hand. Within a few years, that skill will be as relevant as knowing how to shoe a horse.
+I've been watching this transition happen in real time, and it's made me realize something profound: we're living through the end of an era. The era where humans translate ideas into code by hand. Within a few years, that skill will be as relevant as knowing how to shoe a horse.
 
 ## The Coming Compression
 
 I keep telling people to trust capitalism on this one, and they look at me like I'm crazy. But think about the money flowing into AI development right now. Billions of dollars from the smartest investors in the world, all betting that AI coding will get dramatically better. Compute will get faster. Voice-to-code will become instant.
 
-I've seen the trajectory firsthand. Every two months, there's a major model update that makes the previous version look primitive. Features that took our team hours now take minutes. Bugs that used to stump junior developers get fixed automatically before anyone even notices them.
+I've seen the trajectory firsthand, both at Amazon and now at Icon. Every two months, there's a major model update that makes the previous version look primitive. Features that took our team hours now take minutes. Bugs that used to stump junior developers get fixed automatically before anyone even notices them.
 
 Picture building a product in that not-so-distant future. You sit down, describe what you want in plain English, and working software appears. No frameworks to learn. No deployment pipelines to configure. No late nights debugging obscure errors. The only friction between your idea and reality is how clearly you can explain what you want to build.
 
@@ -31,13 +41,13 @@ That changes everything about how products get made and who gets to make them.
 
 ## What I'm Seeing Right Now
 
-On our team, we're already living in this future, at least partially. I watch one of our best developers spend his entire day writing specifications in English, reviewing AI-generated code for maybe ten minutes, then shipping features that would have taken weeks just two years ago.
+At Icon, we're already living in this future, at least partially. I watch one of our best developers spend his entire day writing specifications in English, reviewing AI-generated code for maybe ten minutes, then shipping features that would have taken weeks just two years ago.
 
 The code itself has become an implementation detail, like the electrical wiring behind your drywall. You know it's there, you trust that it works, but you don't think about it unless something breaks. And increasingly, nothing breaks.
 
 This developer isn't becoming less valuable. If anything, he's becoming more valuable because he can focus on the hard problems: figuring out what users actually need, designing systems that scale, making architectural decisions that will matter in two years. The tedious work of translating those decisions into working code is increasingly handled by machines.
 
-But here's what's happening to the junior developers on our team, and it's honestly uncomfortable to watch. The work they used to do—writing boilerplate code, implementing straightforward features, fixing obvious bugs—is evaporating. Not because they're bad at it, but because AI is becoming better at it, and faster, and it doesn't need coffee breaks.
+But here's what's happening to the junior developers on our team, and it's honestly uncomfortable to watch. The work they used to do (writing boilerplate code, implementing straightforward features, fixing obvious bugs) is evaporating. Not because they're bad at it, but because AI is becoming better at it, and faster, and it doesn't need coffee breaks.
 
 I'm not saying junior developers will disappear entirely. But their role is changing so fundamentally that calling them "developers" might not even make sense soon.
 
@@ -47,13 +57,14 @@ Here's what I think happens when building software becomes trivial: the entire g
 
 I keep coming back to this chocolate bar analogy because it's so perfect. Anyone can learn to make chocolate. The ingredients are commoditized. The manufacturing process is well-understood. You can literally buy chocolate-making equipment on Amazon and start a brand tomorrow.
 
-But look at who wins in the chocolate industry. It's not the people with the best manufacturing processes. It's Hershey's, Cadbury, Lindt—brands that figured out distribution, marketing, and customer psychology decades ago. The product quality matters, but it's table stakes. What matters is whether people know your brand exists and trust it enough to buy it.
+But look at who wins in the chocolate industry. It's not the people with the best manufacturing processes. It's Hershey's, Cadbury, Lindt. These are brands that figured out distribution, marketing, and customer psychology decades ago. The product quality matters, but it's table stakes. What matters is whether people know your brand exists and trust it enough to buy it.
 
 Software is heading exactly the same direction. I can already see it happening. The gap between software products and consumer goods is shrinking every month. Both compete on branding, distribution, and understanding customer psychology rather than pure functionality.
 
-I can already imagine—and I bet someone is building this right now—AI that can clone any app from a URL. You feed it a competitor's website or app store listing, and it spits out a functionally identical product in minutes. When that happens, and it will happen soon, the product itself becomes completely commoditized. Success depends entirely on whether you can market and distribute better than the original.
+I can already imagine (and I bet someone is building this right now) AI that can clone any app from a URL. You feed it a competitor's website or app store listing, and it spits out a functionally identical product in minutes. When that happens, and it will happen soon, the product itself becomes completely commoditized. Success depends entirely on whether you can market and distribute better than the original.
 
 ## The Split I'm Watching
+
 Something interesting is happening on our team right now, and I think it's a preview of how the entire industry will divide over the next few years.
 
 There are two camps emerging, and the difference isn't really about skill level or experience. It's about fundamental attitudes toward what programming should be.
@@ -62,7 +73,7 @@ On one side, we have what I call the experimenters. These are people who spend t
 
 But here's what I've realized watching them: they're not lazy. They're just following the natural path that technology has always followed. Every major advancement in programming has been about abstracting away complexity so humans can focus on higher-level problems. We moved from machine code to assembly to high-level languages to frameworks to libraries. Each step made things "easier" and each step had people complaining that developers were getting soft.
 
-These experimenters understand something fundamental: laziness wins in technology. The person who finds a way to accomplish the same result with less effort doesn't just make their own life better—they often discover the path that everyone else will eventually follow.
+These experimenters understand something fundamental: laziness wins in technology. The person who finds a way to accomplish the same result with less effort doesn't just make their own life better. They often discover the path that everyone else will eventually follow.
 
 On the other side, we have the guardians. These are people who believe deeply that understanding code at a fundamental level is non-negotiable. They can spot inefficient algorithms, they know why certain design patterns exist, they understand the underlying systems well enough to debug problems that AI tools can't handle. They see the experimenters as shortcuts artists who are building on shaky foundations.
 
@@ -70,11 +81,11 @@ And honestly? They're not wrong. When the AI-generated code breaks in subtle way
 
 But here's what I think the guardians are missing: the world is changing faster than their gatekeeping can keep up with. The bar for "good enough" code keeps dropping while the bar for understanding users and building valuable products keeps rising. A slightly inefficient implementation that ships next week is often better than a perfectly optimized implementation that ships next month.
 
-I watch these two groups work on the same problems, and it's fascinating. The experimenters ship faster, iterate more, and often end up with products that users prefer—even if the underlying code makes the guardians cringe. The guardians build more robust, maintainable systems, but they sometimes spend so much time perfecting the implementation that they miss opportunities to learn what users actually want.
+I watch these two groups work on the same problems, and it's fascinating. The experimenters ship faster, iterate more, and often end up with products that users prefer (even if the underlying code makes the guardians cringe). The guardians build more robust, maintainable systems, but they sometimes spend so much time perfecting the implementation that they miss opportunities to learn what users actually want.
 
 Neither approach is completely right, but I have a prediction about which one wins in the long run. Technology trends toward convenience and abstraction. The tools get better, the AI gets smarter, and the "shortcuts" that look like cheating today become standard practice tomorrow.
 
-The experimenters aren't just being lazy. They're adapting to a world where the bottleneck isn't code quality—it's everything else.
+The experimenters aren't just being lazy. They're adapting to a world where the bottleneck isn't code quality. It's everything else.
 
 ## The Coming Wave of Mediocre Products
 
@@ -90,13 +101,13 @@ The bottleneck won't be implementation. It will be knowing what's worth implemen
 
 ## What Actually Survives
 
-After watching this transition up close, I'm convinced that three things become incredibly valuable when technical implementation gets commoditized:
+After watching this transition up close, I'm convinced that three things become incredibly valuable when technical implementation gets commoditized.
 
-**Understanding what people actually need.** Not what they say they need in surveys or focus groups, but what they'll actually pay for and use every day. This is harder than it sounds. I've seen brilliant product managers get this wrong constantly. It requires talking to users, watching how they actually behave, understanding the gap between stated preferences and revealed preferences. It's part psychology, part anthropology, part business intuition.
+First is understanding what people actually need. Not what they say they need in surveys or focus groups, but what they'll actually pay for and use every day. This is harder than it sounds. I've seen brilliant product managers get this wrong constantly. It requires talking to users, watching how they actually behave, understanding the gap between stated preferences and revealed preferences. It's part psychology, part anthropology, part business intuition.
 
-**Knowing what to build and what not to build.** This is taste, but it's also strategy. Understanding which features will create real value versus which will just add complexity. Recognizing when a product is good enough versus when it needs more polish. Seeing the difference between a feature users will try once and a feature they'll use every day. Most people are terrible at this. They either build everything anyone suggests or they build nothing because they can't decide what's important.
+Second is knowing what to build and what not to build. This is taste, but it's also strategy. Understanding which features will create real value versus which will just add complexity. Recognizing when a product is good enough versus when it needs more polish. Seeing the difference between a feature users will try once and a feature they'll use every day. Most people are terrible at this. They either build everything anyone suggests or they build nothing because they can't decide what's important.
 
-**Getting products in front of the right people and convincing them to care.** Distribution and marketing, but also positioning, timing, and understanding customer psychology. Building trust and brand recognition. Creating word-of-mouth growth. Understanding how people discover new products and what motivates them to switch from existing solutions.
+Third is getting products in front of the right people and convincing them to care. Distribution and marketing, but also positioning, timing, and understanding customer psychology. Building trust and brand recognition. Creating word-of-mouth growth. Understanding how people discover new products and what motivates them to switch from existing solutions.
 
 These skills don't get automated away. If anything, they become more valuable as technical implementation becomes commoditized. Because when everyone can build software, the winners are the people who understand humans.
 
@@ -112,7 +123,7 @@ The junior developers on our team who are adapting well aren't learning new codi
 
 If you're learning to code today, please don't stop. But don't make coding your only skill. The developers who thrive in this new world will be the ones who understand users, markets, and business models as well as they understand technology.
 
-Spend time talking to people who use software. Not other developers—actual users. Learn what frustrates them about existing products. Understand how they discover new tools and what convinces them to adopt something new.
+Spend time talking to people who use software. Not other developers but actual users. Learn what frustrates them about existing products. Understand how they discover new tools and what convinces them to adopt something new.
 
 Study successful products in industries you care about. Not just their features, but their go-to-market strategies. How did they get their first thousand users? How do they retain customers? What makes people recommend them to friends?
 
@@ -122,7 +133,7 @@ Practice communicating complex ideas simply. The most valuable skill in an AI-as
 
 If you're already a developer or building a company, remember that your technical implementation will soon be replicable by anyone with access to good AI tools. Your competitive advantage needs to be something else.
 
-Better user understanding. Stronger distribution channels. Clearer market positioning. Faster learning cycles. Better taste in what to build. Superior execution on the parts that can't be automated—talking to customers, understanding their problems, iterating based on feedback.
+Better user understanding. Stronger distribution channels. Clearer market positioning. Faster learning cycles. Better taste in what to build. Superior execution on the parts that can't be automated: talking to customers, understanding their problems, iterating based on feedback.
 
 I keep coming back to this: the companies that win won't be the ones with the best code. They'll be the ones that understand their customers best and can get products in front of them most effectively.
 
