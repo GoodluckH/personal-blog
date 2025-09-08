@@ -32,7 +32,7 @@ export default function BlogSlug({ code, frontMatter }) {
       </Head>
       <div className="flex max-w-6xl mx-auto bg-orange-100 pt-[7rem] border-2 border-black">
         <div className="flex flex-col max-w-4xl px-5 mx-auto space-y-10">
-          <div className="flex flex-col mt-25 space-y-7">
+          <div className="flex flex-col mt-25 space-y-4">
             {frontMatter.draft ? (
               <h2 className="text-red-500 dark:text-red-300">DRAFT</h2>
             ) : (
