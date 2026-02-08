@@ -1,0 +1,166 @@
+---
+title: "Year 2025 Reflection: Generational Scam"
+draft: false
+publishedAt: "2026-02-08"
+summary: "Moved to New York City. An imploded startup. Humans getting ruled by AI."
+author: "Xipu Li"
+image: "/images/2025-reflection/last-day-at-icon.jpeg"
+coverImageCaption: Last day at Icon
+tags:
+  - personal
+  - learning
+---
+
+Twelve months ago, I landed in Seattle with an "ambition": work hard to get promoted to L5 for my new grad job at AWS.
+
+Today I'm in New York, working at a start during the day and running an e-commerce business at night that just shipped a product to DJ Zedd.
+
+In between: I got scammed out of $6,000+, survived the most toxic startup implosion I've ever witnessed, and learned that money is very, very real.
+
+## Amazon
+
+When I landed the role at Amazon Q, the generative AI division, I thought I'd won the lottery. This was the hottest technology of the century, and I was going to be building it at one of the most powerful companies on Earth.
+
+That fantasy lasted about a week.
+
+Amazon is world-class at moving boxes, but they are not world-class at building products. And the gap between the two is enormous when you're trying to compete in a market that moves as fast as AI.
+
+My team had been a YC startup before Amazon acquired them. They'd built something like Claude Code, AI in the command line, made for developers. It was lean and fast and opinionated, the kind of product that only exists when a small team has complete ownership and zero bureaucracy. 
+
+Amazon fixed that. The first order of business post-acquisition was to rip out GitHub authentication and force users through the AWS console. They took a product that developers loved and made it feel like filing taxes.
+
+I worked on the subscriptions team, which was its own special disaster. AWS had never built a subscription product before, so instead of integrating Stripe like every other company on the planet, we built our own version from scratch. The requirements changed weekly, sometimes daily, and the full weight of big-tech process bore down on everything we did. The result was a payment system powered by mountains of bad code, integration tests, tests for the integration tests, and somehow it still broke every month. The ultimate solution was to have engineers manually process refunds. That was the system. The cheap L4s were the system.
+
+What really broke my brain was watching how incentives actually played out at a company like this. Engineering teams were understaffed while product teams were under pressure to ship something, anything, that leadership could put on a slide. So corners got cut but never the corners you'd expect.
+
+I inherited a project after everyone else quit: an automated email system to remind customers to activate their subscriptions. Simple enough, and the business logic made sense. We didn't charge until customers started using the product, so there was real money in getting people to activate faster. But the leadership wanted it shipped yesterday. The interim PM used ChatGPT to translate our emails into foreign languages instead of going through the internal localization team, the people who actually understand cultural nuance and legal liability and the difference between "friendly reminder" and "we're watching you" in Japanese.
+
+When we rolled out to our biggest region, the complaints started pouring in. Enterprise customers saying they never consented to receive these emails. And the thing about emails is that you can't unsend them. It's a one-way door, and we'd already walked through it.
+
+The irony was suffocating. We had processes for everything. Design reviews, security reviews, seventeen approvals to change a button color. But for customer-facing communications that could create legal exposure? Move fast, ship it, figure it out later.
+
+Code reviews barely existed because senior engineers were stretched across so many projects that they'd approve pull requests without really reading them. Who had time? Everyone was underwater.
+
+And then there was the politics. Most of our users were internal Amazon engineers who couldn't use Claude Code or other third-party tools due to privacy concerns, so they used our product instead. Which meant principal engineers, people with titles that commanded automatic deference, would sometimes just build features they personally wanted. They'd vibe-code something over a weekend and open a PR to merge it into production.
+
+I watched talented engineers leave, one by one. Each resignation meant their on-call shifts got redistributed to whoever remained, and within a few months I found myself on three different teams' schedules. I was getting paged at 3 AM for systems I'd never touched, debugging code I didn't write, fixing problems that shouldn't have existed in the first place. And it wasn't just real emergencies. Our outsourced customer experience team in India had access to the on-call tag, and they'd use it to ping the entire engineering team at 2 AM for things like "can you guys take a look at this customer refund request?" Not a system outage. Not a security breach. A refund. Everyone's phones screamed in the middle of the night because someone didn't know—or didn't care—what "on-call" actually meant.
+
+One night, after yet another 2 AM page for something that could have waited until morning, I texted Kevin.
+
+Kevin was someone I'd worked with briefly at a previous startup. He'd been trying to recruit me to Icon, a generative AI ad startup in New York that had recently gone viral on the internet. A few months earlier, when he first reached out, I'd turned him down. I was committed to the Amazon path. I was going to grind it out, get the promotion, do things the right way.
+
+But that was before I ended up on three on-call rotations. Before I calculated my effective hourly rate. Before I realized I was killing myself for a company that couldn't decide what it was building.
+
+"Are you guys still hiring?"
+
+The next day, I was on a plane to JFK. Three days later, after a work trial, I had an offer. I signed it that same night, before I could talk myself out of it. Two weeks notice at Amazon, sold my furniture, packed everything I owned into suitcases. Seattle to New York, just like that.
+
+
+
+## The Generational Scam
+
+
+Sometimes the beginning sets the tone for the rest of the story.
+
+Before I even set foot in New York, I got scammed out of $6,000.
+
+Finding an apartment in the city is its own kind of warfare, especially when you're doing it remotely with two weeks to figure everything out. I found a listing on Xiaohongshu—a Chinese social app that's become a shadow real estate market for people who don't trust Craigslist. The apartment looked perfect. Good price, great location, available immediately. I wired the deposit and first month's rent.
+
+The apartment didn't exist. The landlord didn't exist. The whole thing was a fiction, built just well enough to catch someone who was desperate and moving fast.
+
+I hadn't even started my new job yet, and I was already down six grand. Welcome to New York.
+
+That was the first scam. The second one paid a salary.
+
+The pitch the CEO gave me was intoxicating. He walked me through the numbers: the ARR, the growth trajectory, the vision. He glossed over the 70% churn rate like it was a minor detail. "Generational wealth" was the broad stroke that made everything else disappear. Who cares about churn when you're going to be rich? Who needs work-life balance when you're building the future? It's a magic phrase that turned red flags into minor details and exploitation into opportunity.
+
+I didn't know how equity worked back then. Not really. I understood the concept—you get a percentage of the company, the company gets big, you get rich—but I didn't understand liquidation preferences, or dilution, or how a Series A can wipe out early employees while making founders and investors whole. I didn't know what questions to ask, and they weren't volunteering the answers. It wasn't until much later that I realized how badly I'd been lowballed.
+
+But at the moment, none of that mattered. The founder had a story that was impossible to ignore. He was a 2x founder. His previous company had actually reached product-market fit, but he'd walked away because the market was too small. This time, he said, he was shooting for the moon. And the investors believed him with A-list names like Founders Fund had written checks.
+
+With a halo like that, my initial suspicions felt small and paranoid. This guy doesn't believe in talking to customers? He's against A/B testing? He rejects basically every conventional method of building a product? I dismissed it all. He's a second-time founder with serious backers. He knows what he's doing.
+
+The requirements came top-down, straight from his head, delivered as edicts rather than hypotheses. We'd later find out most of them came from ChatGPT.
+
+But in the beginning, things were okay. The schedule was brutal—seven days a week, mandatory in-person—but I was young and bought into the narrative. Generational wealth. This is what it takes. Food was expensed, rent was subsidized, and I lived in K-Town, where there's a constant flow of high energy day and night. The neon signs and the late-night Korean BBQ spots made it easy to forget that I hadn't had a day off in weeks.
+
+For a few months, I was even happy. I was designing experiments, watching metrics move, feeling like I was building something real. Fast feedback loops. Actual ownership. After the bureaucratic suffocation of Amazon, it felt like freedom.
+
+Most of what I worked on was finding new ways to extract money from customers. Upsells everywhere. Flows designed to deter cancellation, or better yet, trick people into upgrading while they were trying to leave. When customers complained, the response was always the same: "Doesn't move the needle."
+
+The needle. I heard about that needle constantly. I never got a clear answer on what the needle actually was, or how big it was, or what would happen when we finally moved it. But I do know this: when we pivoted to managed services, leadership called it "moving the needle." So apparently the needle was pointing at "become an ad agency" this whole time. 
+
+Instead of charging $39 a month for self-serve software, we'd charge $1,000 or more to make ads manually for clients. Engineers went from being the core of the company to a support function, building internal tools for operators instead of products for users. The interesting work disappeared. But the working condition worsened with mandatory stand-ups added to the weekends, as if seven days a week wasn't enough without also having to justify your existence.
+
+Seven days a week stopped feeling like dedication. It started feeling like a scam.
+
+## The implosion
+The first sign of this was the morale degradation. Most engineers no longer work inside of the office. We’d rather go to other parts of the WeWork than getting crammed in a room where the leadership constantly talks about 180-degree changes, how to upsell etc.
+
+This was disheartening to me because a big part of why I signed up for this job was because engineers used to be in the room, trolling each other, crack jokes. Now, work felt like... work.
+
+The last straw was one of our best engineers resigned. People started searching for new jobs. THe CEO sensed this, so he gathered the entire team on a beautiful afternoon in New York, , the kind of day that makes you briefly forgive the city for everything it puts you through, and walked us to Madison Square Park. We sat on benches, confused, waiting for whatever was coming.
+
+He pulled out his phone and started reading.
+The speech was written by ChatGPT. He talked about the company's journey, about challenges, about needing people who were truly committed. The irony of an AI startup founder reading an AI-generated pep talk to convince us to stay was almost too perfect.
+
+Then he got to the point: he knew some of us were thinking about leaving. He wanted us to take the rest of the day off and really reflect on whether we wanted to be here.
+
+We dispersed. Some people went home. A few of us went to dinner, trying to process what had just happened, debating what to do next. We talked for hours, going in circles, none of us sure whether to stay or go.
+
+When we got back to the office that night to grab our things, we didn't expect him to still be there.
+
+He was.
+
+The moment we walked in, the air changed. Nobody knew what to say. The silence was thick and uncomfortable, the kind of quiet that feels louder than noise. We avoided eye contact, stared at our phones, shuffled toward our desks without speaking.
+
+The engineer who'd resigned broke the silence. He looked at the CEO and said, almost casually, "Good luck rebuilding your team."
+
+Something shifted in that moment. I could see it in the CEO's face, a kind of hardening. Whatever off-ramp he might have been considering closed off right then.
+
+That night, every engineer got terminated.
+
+The next morning, my phone rang. It was the CEO.
+
+"Why wouldn't you look at me?"
+
+That was his opening line. He wanted to understand why nobody had made eye contact with him the night before. He wanted to know if there was something he could fix. And buried underneath all of that, he wanted to offer me my job back.
+
+I listened, trying to reconcile the person on the phone with the person who had fired his entire engineering team twelve hours earlier because the vibes felt off. This was a man who had raised millions of dollars, who gave speeches about building the future, who demanded seven days a week from his employees in service of his vision. And he blew it all up because people were awkward during an awkward moment.
+
+Some people build companies. Others build monuments to their own insecurity. It's worth learning how to tell the difference before you sign the offer letter.
+
+## The aftermath
+
+Word travels fast in the Valley.
+
+Within two days, my phone wouldn't stop buzzing. Recruiters, founders, investors who wanted to make introductions. I booked thirty interviews for the following week without sending a single application. For the first time in my career, opportunities were chasing me.
+
+It was disorienting. I'd spent years operating from the other side of the table, the side where you send out applications and hope someone notices, where you practice interview questions and try to prove you're worth taking a chance on. Suddenly I had leverage, and everything felt different. Conversations were easier. Negotiations were easier. People returned my DMs.
+
+The experience rewired how I think about careers. The goal is to never have to apply. Build something valuable, whether that's a skill, a reputation, a body of work, or even just a good story. Get good at telling people about it. High-quality opportunities find you when you're worth finding. Casting a wide net and hoping for the best is what you do when you have nothing else going for you.
+
+I don't want to be in that position again.
+
+## I miss the flow state
+
+I used to put on my favorite music, disappear into the code, and spend hours crafting something by hand. Watching changes appear on localhost:3000. Losing track of time because I was so deep in the work that time stopped mattering.
+
+That feeling is getting rare.
+
+Now I command six terminal windows running Claude Code simultaneously. Admittedly, a lot gets done. But I've become an air traffic controller instead of an artist. I'm directing traffic, not crafting anything. The work happens around me, not through me.
+
+We're on a treadmill now, and the treadmill only goes faster. It's increasingly about the result rather than the journey. Ship more. Ship faster. Nobody asks if you enjoyed building it.
+
+The strangest part is how my own expectations have shifted. With [OpenClaw](openclaw.ai), I don't even want to write prompts or provide context anymore. I catch myself wishing the AI could just read my Slack, understand what needs to happen, test the app in the browser, and figure it out on its own. I want to remove myself from the loop entirely.
+
+Will people be happier in a post-AGI world? When all the challenges that were once sources of fulfillment can be outsourced, what's left? The struggle is the point. The struggle is where meaning lives. Take that away, and what do we have?
+
+I think about what humans should focus on when "work" can be done by machines. My guess is that most people will become tool calls, human APIs that some superintelligent system invokes when it needs something done in the physical world. A small percentage will be the ones who own the AI, direct the AI, reap the rewards of the AI. The rest will be utility functions.
+
+It's a strange turning point in human history. And naturally, being a product of this moment, my first instinct is to wonder how I can benefit from it.
+
+Can the activity of making money itself be outsourced? I'm already running experiments. I have a bot making bets on Kalshi. It's working so far. Not life-changing money, but enough to make me wonder what happens when the bot gets smarter and I get more comfortable letting it run.
+
+I'm not sure if this is exciting or terrifying. Probably both.
+

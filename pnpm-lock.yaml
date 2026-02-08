@@ -15,8 +15,8 @@ importers:
         specifier: ^17.0.38
         version: 17.0.88
       '@vercel/analytics':
-        specifier: ^1.5.0
-        version: 1.5.0(next@12.0.1(@babel/core@7.28.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(webpack@4.47.0))(react@17.0.2)
+        specifier: 1.0.2
+        version: 1.0.2
       axios:
         specifier: ^0.27.2
         version: 0.27.2
@@ -470,31 +470,8 @@ packages:
     resolution: {integrity: sha512-uqi/2aSz9g2ftcHWf8uLPJA70rUv6yuMW5Bohw+bwcuzaxQIHaKFZCKGoGXIrc9vkTJ3+0txM73K0Hq3d5wgIg==}
     engines: {node: ^8.10.0 || ^10.13.0 || >=11.10.1}
 
-  '@vercel/analytics@1.5.0':
-    resolution: {integrity: sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g==}
-    peerDependencies:
-      '@remix-run/react': ^2
-      '@sveltejs/kit': ^1 || ^2
-      next: '>= 13'
-      react: ^18 || ^19 || ^19.0.0-rc
-      svelte: '>= 4'
-      vue: ^3
-      vue-router: ^4
-    peerDependenciesMeta:
-      '@remix-run/react':
-        optional: true
-      '@sveltejs/kit':
-        optional: true
-      next:
-        optional: true
-      react:
-        optional: true
-      svelte:
-        optional: true
-      vue:
-        optional: true
-      vue-router:
-        optional: true
+  '@vercel/analytics@1.0.2':
+    resolution: {integrity: sha512-BZFxVrv24VbNNl5xMxqUojQIegEeXMI6rX3rg1uVLYUEXsuKNBSAEQf4BWEcjQDp/8aYJOj6m8V4PUA3x/cxgg==}
 
   '@webassemblyjs/ast@1.9.0':
     resolution: {integrity: sha512-C6wW5L+b7ogSDVqymbkkvuW9kruN//YisMED04xzeBBqjHa2FYnmvOlS6Xj68xWQRgWvI9cIglsjFowH/RJyEA==}
@@ -4341,10 +4318,7 @@ snapshots:
       '@typescript-eslint/types': 4.33.0
       eslint-visitor-keys: 2.1.0
 
-  '@vercel/analytics@1.5.0(next@12.0.1(@babel/core@7.28.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(webpack@4.47.0))(react@17.0.2)':
-    optionalDependencies:
-      next: 12.0.1(@babel/core@7.28.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(webpack@4.47.0)
-      react: 17.0.2
+  '@vercel/analytics@1.0.2': {}
 
   '@webassemblyjs/ast@1.9.0':
     dependencies:
@@ -5487,7 +5461,7 @@ snapshots:
       eslint: 7.32.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.32.0(eslint@7.32.0))(eslint@7.32.0)
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@5.9.2))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.32.0(eslint@7.32.0))(eslint@7.32.0))(eslint@7.32.0)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@5.9.2))(eslint-import-resolver-typescript@2.7.1)(eslint@7.32.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@7.32.0)
       eslint-plugin-react: 7.37.5(eslint@7.32.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@7.32.0)
@@ -5514,7 +5488,7 @@ snapshots:
     dependencies:
       debug: 4.4.1
       eslint: 7.32.0
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@5.9.2))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.32.0(eslint@7.32.0))(eslint@7.32.0))(eslint@7.32.0)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@5.9.2))(eslint-import-resolver-typescript@2.7.1)(eslint@7.32.0)
       glob: 7.2.3
       is-glob: 4.0.3
       resolve: 1.22.10
@@ -5533,7 +5507,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@5.9.2))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.32.0(eslint@7.32.0))(eslint@7.32.0))(eslint@7.32.0):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@5.9.2))(eslint-import-resolver-typescript@2.7.1)(eslint@7.32.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
