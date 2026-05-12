@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
 import { getSortedPostsData } from '../lib/mdx'
@@ -70,7 +71,7 @@ export default function Home({ allPostsData }) {
             <Field k="side"  v={<><Ext href="https://drinkable.art">drinkable.art</Ext> — crowd-voted NYC cafés for remote work</>} />
             <Field k="prev"  v={<>founding eng @ <Ext href="https://icon.com/">icon</Ext> · sold <Ext href="https://www.forget.work">forget</Ext> · self-published <Ext href="https://www.google.com/search?q=The+Imperium+Empires+in+a+Fissure+Xipu+Li">a sci-fi book</Ext></>} />
             <Field k="writes" v={<><Ext href="https://letter.xipu.li/">letters</Ext> · public-equity <Ext href="https://moicandroic.home.blog/">notes</Ext></>} />
-            <Field k="now"   v={<a className="underline decoration-rule underline-offset-2 hover:decoration-accent hover:text-accent" href="/now">cat /now</a>} />
+            <Field k="now"   v={<Link href="/now"><a className="underline decoration-rule underline-offset-2 hover:decoration-accent hover:text-accent">cat /now</a></Link>} />
           </dl>
         </Block>
 
