@@ -5,6 +5,14 @@ module.exports = {
       source: '/rss.xml',
       destination: '/api/rss',
     },
+    {
+      source: '/llms.txt',
+      destination: '/api/llms',
+    },
+    {
+      source: '/sitemap.xml',
+      destination: '/api/sitemap',
+    },
   ],
 
   // webpack: (config, { dev, isServer }) => {

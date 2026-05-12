@@ -1,19 +1,21 @@
 import Navbar from './navbar'
 import SocialIcons from './SocialIcons'
-export default function Layout({ children, home }) {
+
+export default function Layout({ children }) {
   return (
-    <div>
-      <div className="transition-colors duration-500 ease-in-out  dark:bg-slate-900 h-full">
-        <header className="w-full fixed top-0 z-10 ">
-          <Navbar />
-        </header>
+    <div className="min-h-screen flex flex-col bg-paper">
+      <Navbar />
 
-        <main className="max-w-4xl mx-auto px-4 pb-24">{children}</main>
+      <main className="flex-1 w-full max-w-2xl mx-auto px-6 md:px-8 pt-24 md:pt-28 pb-24 animate-fadein">
+        {children}
+      </main>
 
-        <footer className="sticky top-[100vh] pb-1 sm:pb-5 md:pb-8">
+      <footer className="w-full max-w-2xl mx-auto px-6 md:px-8 pb-10">
+        <div className="border-t border-rule pt-6 flex items-center justify-between">
+          <span className="label">Xipu Li · {new Date().getFullYear()}</span>
           <SocialIcons />
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
   )
 }

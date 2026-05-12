@@ -19,16 +19,15 @@ const CustomLink = (props) => {
 
 const BlogImg = (props) => {
   return (
-    <div className="my-2">
+    <figure className="my-8">
       <Image
         src={props.src}
         alt={props.alt}
         layout="responsive"
         {...props}
-        className="rounded-xl dark:brightness-95"
       />
-      <figcaption>{props.caption}</figcaption>
-    </div>
+      {props.caption && <figcaption>{props.caption}</figcaption>}
+    </figure>
   )
 }
 

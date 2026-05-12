@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,69 +8,384 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  @apply bg-purple-500
+  font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas,
+    monospace;
+  color: #0e0e0c;
+  background-color: #fafaf7;
+  font-feature-settings: 'ss02', 'cv02', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 
 * {
   box-sizing: border-box;
 }
 
-@layer base {
-  sup {
-    @apply text-orange-500 font-bold;
-  }
+::selection {
+  background-color: #0e0e0c;
+  color: #fafaf7;
+}
 
-  a:target {
-    @apply hover:text-white hover:bg-black pt-[90px] mt-[-90px];
+/* ---------- caret ---------- */
+.caret::after {
+  content: '';
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 2px;
+  background: #0e0e0c;
+  vertical-align: -0.15em;
+  animation: blink 1.05s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
   }
+}
 
-  a {
-    @apply underline hover:bg-black hover:text-yellow-500 hover:no-underline;
-  }
+/* ---------- selected row marker ---------- */
+.row-selected {
+  background: linear-gradient(
+    to right,
+    rgba(138, 75, 46, 0.07),
+    rgba(138, 75, 46, 0)
+  );
+  box-shadow: inset 2px 0 0 #8a4b2e;
+}
 
-  * {
-    @apply selection:bg-sky-500 selection:text-white;
-  }
+/* ---------- focus ---------- */
+:focus-visible {
+  outline: 2px solid #8a4b2e;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 
-  h1 {
-    @apply text-5xl md:text-4xl py-2 font-semibold;
-  }
+/* theme-aware vars used inline on the REPL input */
+:root {
+  --cli-text: #0e0e0c;
+  --cli-caret: #8a4b2e;
+}
+html.dark {
+  --cli-text: #e8e5da;
+  --cli-caret: #d29a78;
+}
 
-  h2 {
-    @apply text-2xl pt-3 pb-1 md:text-3xl md:pt-5 md:pb-2 font-semibold text-black;
-  }
+/* REPL input: no harsh outline; color set via inline style + CSS var */
+.cli-input:focus,
+.cli-input:focus-visible {
+  outline: none !important;
+}
 
-  h3 {
-    @apply text-xl pt-3 pb-1 md:text-2xl md:pt-5 md:pb-2 font-bold text-black;
-  }
+/* writing-row focus: terminal cursor look, replaces the harsh outline */
+.row-link:focus-visible {
+  outline: none;
+  background: linear-gradient(
+    to right,
+    rgba(138, 75, 46, 0.08),
+    rgba(138, 75, 46, 0)
+  );
+  box-shadow: inset 2px 0 0 #8a4b2e;
+}
+.row-link:focus-visible .row-cursor {
+  color: #8a4b2e;
+}
+.row-link:focus-visible .row-cursor::after {
+  content: '›';
+}
+html.dark .row-link:focus-visible {
+  background: linear-gradient(
+    to right,
+    rgba(210, 154, 120, 0.12),
+    rgba(210, 154, 120, 0)
+  );
+  box-shadow: inset 2px 0 0 #d29a78;
+}
+html.dark .row-link:focus-visible .row-cursor {
+  color: #d29a78;
+}
 
-  p {
-    @apply text-base md:text-lg;
+/* ---------- entry animation ---------- */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadein {
+  animation: fadein 240ms cubic-bezier(0.2, 0.65, 0.2, 1) both;
+}
 
-  article {
-    @apply flex flex-col space-y-5 text-slate-900 dark:text-slate-300;
+/* ---------- typing animation for prompt ---------- */
+@keyframes typing {
+  from {
+    max-width: 0;
   }
+  to {
+    max-width: 100%;
+  }
+}
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 600ms steps(40, end) both;
+}
 
-  figcaption {
-    @apply italic pt-2 text-sm text-center text-gray-600 dark:text-slate-400;
+/* ---------- prose (article body) ---------- */
+.prose {
+  color: #0e0e0c;
+  font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+@media (min-width: 768px) {
+  .prose {
+    font-size: 14.5px;
   }
+}
 
-  ol {
-    @apply text-base font-medium mx-6 md:mx-10 md:text-lg dark:marker:text-slate-300 marker:text-gray-900 marker:font-bold list-decimal pl-5 max-w-4xl my-2;
-  }
+.prose p,
+.prose ul,
+.prose ol,
+.prose pre,
+.prose blockquote,
+.prose figure,
+.prose hr,
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: 1.15em;
+  margin-bottom: 0;
+}
+.prose > :first-child,
+.prose p:first-child {
+  margin-top: 0;
+}
 
-  ul {
-    @apply marker:text-black list-disc pl-5 max-w-4xl my-2;
-  }
+.prose h2 {
+  margin-top: 2.2em;
+  margin-bottom: 0;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #0e0e0c;
+}
+.prose h2::before {
+  content: '## ';
+  color: #b8b6ae;
+  font-weight: 400;
+}
+.prose h3 {
+  margin-top: 1.8em;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0e0e0c;
+}
+.prose h3::before {
+  content: '### ';
+  color: #b8b6ae;
+  font-weight: 400;
+}
+.prose h2 + *,
+.prose h3 + * {
+  margin-top: 0.6em;
+}
 
-  li {
-    @apply py-1 text-slate-900 dark:text-gray-300;
-  }
+.prose a {
+  color: #0e0e0c;
+  text-decoration: underline;
+  text-decoration-color: #c7c5be;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease, color 150ms ease;
+}
+.prose a:hover {
+  text-decoration-color: #8a4b2e;
+  color: #8a4b2e;
+}
 
-  pre {
-    @apply py-2;
-  }
+.prose ul,
+.prose ol {
+  margin: 0;
+  padding-left: 1.4em;
+}
+.prose ul {
+  list-style: none;
+}
+.prose ul > li {
+  position: relative;
+  padding-left: 0.2em;
+}
+.prose ul > li::before {
+  content: '–';
+  position: absolute;
+  left: -1em;
+  color: #8f8d87;
+}
+.prose ol {
+  list-style: decimal;
+}
+.prose li {
+  margin: 0.2em 0;
+}
+.prose li > p {
+  margin: 0;
+}
+
+.prose blockquote {
+  margin: 1.4em 0;
+  padding: 0 0 0 0.9em;
+  border-left: 2px solid #b8b6ae;
+  color: #6f6e69;
+  font-style: normal;
+}
+.prose blockquote p::before {
+  content: '> ';
+  color: #b8b6ae;
+}
+
+.prose img,
+.prose figure {
+  margin: 1.8em 0;
+}
+
+.prose hr {
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px dashed #c7c5be;
+}
+
+.prose code {
+  font-family: inherit;
+  font-size: 0.92em;
+  background: #efede6;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  border: 1px solid #dbd9d2;
+}
+.prose pre {
+  background: #0e0e0c;
+  color: #fafaf7;
+  padding: 0.9rem 1.1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin: 1.4em 0;
+}
+.prose pre code {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+}
+.prose figcaption {
+  text-align: center;
+  font-size: 12px;
+  color: #6f6e69;
+  margin-top: 0.5em;
+}
+
+/* utilities */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+.dim {
+  color: #8f8d87;
+}
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+html.dark body {
+  background-color: #181714;
+  color: #e8e5da;
+}
+html.dark ::selection {
+  background-color: #e8e5da;
+  color: #181714;
+}
+
+html.dark .text-ink { color: #e8e5da; }
+html.dark .text-paper { color: #181714; }
+html.dark .text-muted { color: #8a8880; }
+html.dark .text-accent { color: #d29a78; }
+html.dark .text-rule  { color: #38362f; }
+
+html.dark .bg-paper   { background-color: #181714; }
+html.dark .bg-ink     { background-color: #e8e5da; color: #181714; }
+html.dark .bg-surface { background-color: #232220; }
+html.dark .bg-accent  { background-color: #d29a78; color: #181714; }
+
+html.dark .border-rule { border-color: #2d2b27; }
+html.dark .border-ink  { border-color: #e8e5da; }
+html.dark .dim         { color: #8a8880; }
+
+html.dark .row-selected {
+  background: linear-gradient(
+    to right,
+    rgba(210, 154, 120, 0.12),
+    rgba(210, 154, 120, 0)
+  );
+  box-shadow: inset 2px 0 0 #d29a78;
+}
+
+html.dark .caret::after {
+  background: #e8e5da;
+}
+
+html.dark .prose {
+  color: #e8e5da;
+}
+html.dark .prose h2,
+html.dark .prose h3,
+html.dark .prose h4 { color: #e8e5da; }
+html.dark .prose h2::before,
+html.dark .prose h3::before { color: #4d4a40; }
+html.dark .prose a {
+  color: #e8e5da;
+  text-decoration-color: #4d4a40;
+}
+html.dark .prose a:hover {
+  color: #d29a78;
+  text-decoration-color: #d29a78;
+}
+html.dark .prose ul > li::before { color: #6a6760; }
+html.dark .prose blockquote {
+  border-left-color: #3d3b34;
+  color: #8a8880;
+}
+html.dark .prose blockquote p::before { color: #4d4a40; }
+html.dark .prose hr { border-top-color: #3d3b34; }
+html.dark .prose code {
+  background: #232220;
+  border-color: #2d2b27;
+  color: #e8e5da;
+}
+html.dark .prose pre {
+  background: #0d0c0a;
+  color: #e8e5da;
+  border: 1px solid #2d2b27;
+}
+html.dark .prose figcaption { color: #8a8880; }
+
+html.dark :focus-visible {
+  outline-color: #d29a78;
 }

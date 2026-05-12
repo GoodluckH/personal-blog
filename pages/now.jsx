@@ -1,660 +1,227 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import { useRef } from 'react'
+import CLIShell from '../components/CLIShell'
 import ExpandableCard from '../components/ExpandableCard'
-// import styles from "../styles/Home.module.css";
-import useDarkMode from '../lib/useDarkMode'
+import SEO from '../components/SEO'
+import { getSortedPostsData } from '../lib/mdx'
+import useLinkWalk from '../lib/useLinkWalk'
 
-export default function Home() {
-  const [darkMode] = useDarkMode()
+export default function Now({ allPostsData }) {
+  const containerRef = useRef(null)
+  useLinkWalk({ containerRef })
+
+  const posts = (allPostsData || [])
+    .filter((p) => !p.draft && !p.chinese)
+    .sort((a, b) => (a.publishedAt > b.publishedAt ? -1 : 1))
+
   return (
     <>
-      <Head>
-        <title>Now</title>
-        <meta name="description" content="Xipu Li's personal website" />
-        {darkMode ? (
-          <link
-            rel="icon"
-            href={`data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>`}
-          />
-        ) : (
-          <link
-            rel="icon"
-            href={`data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔨</text></svg>`}
-          />
-        )}
-      </Head>
-      <div className="max-w-4xl  mt-[10rem] bg-black  -mr-2 sm:mr-0">
-        <div className='bg-rose-300 border-black border-2 px-5 -translate-x-2 -translate-y-2'>    <div>
-          <h2 className="text-gray-900 dark:text-white">
-            <span className="text-4xl font-black">Now</span>
-          </h2>
-          <h4 className="text-black">
-            <span className="text-base italic md:text-md">
-              As of Aug 5, 2025
-            </span>
-          </h4>
-          <section className="mt-[10px] md:mt-[10px] font-semibold">
-            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">Icon</h3>
-            <p className="pt-2 text-base sm:text-lg ">
-              I&apos;m a Founding Engineer at <a href="https://icon.com/" target="_blank" rel="noreferrer">Icon</a>.
-            </p>
+      <SEO
+        title="Now"
+        description="What Xipu Li is working on, reading, and thinking about right now."
+        path="/now"
+        image="/og/now.png"
+      />
 
+      <CLIShell posts={posts} cwd="~/now">
+        <div ref={containerRef}>
+        <p className="px-2 text-[12px] md:text-[13px] dim mb-2">
+          <span className="text-accent">$</span> cat now.md
+        </p>
 
-            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">ManUp</h3>
-            <p className="pt-2 text-base sm:text-lg text-black">
-              A <a href="https://manupgame.com" target="_blank" rel="noreferrer">dating game</a> that helps you get better at dating.
-            </p>
-
-            <h3 className="mt-[10px] md:mt-[20px] text-black font-extrabold">Reading</h3>
-            <ul
-              role="list"
-              className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
-            >
-              <li>
-                <a
-                  href="https://amzn.to/4li1vpU"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                  One Golden Summer
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://amzn.to/4meaxp2"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic"
-                >
-                  Sam Walton: Made In America
-                </a>
-              </li>
-
-            </ul>
-            <h2></h2>
-
-            <ExpandableCard title="Book Shelf">
-
-              <h3 className="mt-[10px] md:mt-[20px]">2025</h3>
-              <ul
-                role="list"
-                className="text-base sm:text-lg"
-              >
-                <li>
-                  <a
-                    href="https://amzn.to/4eckvn6"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Grinding It Out: The Making of McDonald&#39;s
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/4dfip4n"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Caste: The Origins of Our Discontents
-                  </a>
-                </li>
-
-              </ul>
-
-              <h3 className="mt-[10px] md:mt-[20px]">2024</h3>
-              <ul
-                role="list"
-                className="text-base sm:text-lg"
-              >
-                <li>
-                  <a
-                    href="https://amzn.to/3ZFO7EK"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Same as Ever: A Guide to What Never Changes
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/4dC7bIv"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://amzn.to/3AzU3on"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    The Algebra of Wealth: A Simple Formula for Financial Security
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/4dY8iBL"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Disrupted: Ludicrous Misadventures in the Tech Start-up Bubble
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3S0ABaS"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Six of Crows
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/4g2pQhV"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead                </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3XmxJrt"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Status and Culture: How Our Desire for Social Rank Creates Taste, Identity, Art, Fashion, and Constant Change
-                  </a>
-                </li>
-
-              </ul>
-
-
-              <h3 className="mt-[10px] md:mt-[20px]">2023</h3>
-
-              <ul
-                role="list"
-                className="text-base sm:text-lg"
-              >
-                <li>
-                  <a
-                    href="https://amzn.to/3UbUyup"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    The Rise of Theodore Roosevelt
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3WqWj6J"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Lights Out: Pride, Delusion, and the Fall of General Electric
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/46me39G"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Red Queen
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://amzn.to/44f1RFB"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Outlive: The Science and Art of Longevity
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3pdP9Z9"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Guns, Germs, and Steel: The Fates of Human Societies
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3PtggKr"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    To Sell Is Human: The Surprising Truth About Moving Others
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3NJM6B5"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Influence: The Psychology of Persuasion
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3DTiAV3"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Ikigai: The Japanese Secret to a Long and Happy Life
-                  </a>
-                </li>
-
-              </ul>
-
-
-              <h3 className="mt-[10px] md:mt-[20px]">2022</h3>
-              <ul
-                role="list"
-                className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
-              >
-                <li>
-                  <a
-                    href="https://amzn.to/3SucSwY"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Onward: How Starbucks Fought for Its Life without Losing Its
-                    Soul
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3Bu3vGW"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Amazon Unbound: Jeff Bezos and the Invention of a Global
-                    Empire
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3dPc7jg"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Give and Take: Why Helping Others Drives Our Success
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3SsetTS"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Ego Is the Enemy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3BKcIuD"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Red Roulette: An Insider&#39;s Story of Wealth, Power,
-                    Corruption, and Vengeance in Today&#39;s China
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3ffuuym"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Frankenstein
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3LI3JyE"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Mental Immunity: Infectious Ideas, Mind-Parasites, and the
-                    Search for a Better Way to Think
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3r34SYh"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Counselling for Toads: A Psychological Adventure
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3xTtCps"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Adult Children of Emotionally Immature Parents: How to Heal
-                    from Distant, Rejecting, or Self-Involved Parents
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3S6g6XL"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    What Happened to You?: Conversations on Trauma, Resilience,
-                    and Healing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3CbPa3r"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Token Economy: How the Web3 reinvents the Internet
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3LHklXc"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Status Anxiety
-                  </a>
-                </li>
-              </ul>
-
-              <h3 className="mt-[10px] md:mt-[20px]">2021</h3>
-              <ul
-                role="list"
-                className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
-              >
-                <li>
-                  <a
-                    href="https://amzn.to/3DVjikU"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    The Subtle Art of Not Giving a F*ck
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3DYjy2B"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Stillness Is the Key
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3DQ4hAz"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Land Of Big Numbers: Stories
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3r8kk5c"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    What If?: Serious Scientific Answers to Absurd Hypothetical
-                    Questions
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3Su4JbS"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    A Compass to Fulfillment: Passion and Spirituality in Life
-                    and Business
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3Sj2wQT"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    You Can Be a Stock Market Genius: Uncover the Secret Hiding
-                    Places of Stock Market Profits
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3BLFACG"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Delivering Happiness
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3RdEG7J"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Value Investing: From Graham to Buffett and Beyond
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3RdE4yQ"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Competition Demystified: A Radically Simplified Approach to
-                    Business Strategy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3DTTndo"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    The Most Important Thing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3UELcaM"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Tools Of Titans: The Tactics, Routines, and Habits of
-                    Billionaires, Icons, and World-Class Performers
-                  </a>
-                </li>
-              </ul>
-
-              <h3 className="mt-[10px] md:mt-[20px]">2020</h3>
-              <ul
-                role="list"
-                className="text-base sm:text-lg text-slate-600 dark:text-slate-200"
-              >
-                <li>
-                  <a
-                    href="https://amzn.to/3xSG1tY"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    The Almanack of Naval Ravikant: A Guide to Wealth and
-                    Happiness
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://amzn.to/3DUvZfE"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    The Psychology of Money: Timeless lessons on wealth, greed,
-                    and happiness
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3Sxnj2V"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    What I Learned Losing A Million Dollars
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3Su3rxy"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Kochland: The Secret History of Koch Industries and
-                    Corporate Power in America
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3C48FK3"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Zero To One
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3Reyahd"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Ai Superpowers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3C8uh91"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Thing Explainer: Complicated Stuff in Simple Words
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3r329Ox"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    Distressed Debt Analysis: Strategies for Speculative
-                    Investors
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://amzn.to/3xROopu"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="italic"
-                  >
-                    1984
-                  </a>
-                </li>
-              </ul>
-            </ExpandableCard>
-          </section>
-
-          <p className="pt-10 italic text-sm sm:text-sm text-slate-8 mb-5">
-            Inspired by{' '}
-            <a
-              href="https://www.natecation.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Nathan Leung
-            </a>
-            &apos;{' '}
-            <a
-              href="https://www.natecation.com/now/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              now
-            </a>{' '}
-            page.
+        <div className="px-2 space-y-6 text-[13px] md:text-[14px]">
+          <p className="dim">
+            <span className="text-accent"># </span>
+            now — updated 2026-05-11
           </p>
-        </div></div>
 
-      </div>
+          <Section heading="work">
+            <p>
+              Engineer at <Ext href="https://finchlegal.com">Finch</Ext>.
+            </p>
+          </Section>
+
+          <Section heading="side">
+            <p>
+              Building <Ext href="https://drinkable.art">drinkable.art</Ext> —
+              a crowd-voted directory of NYC cafés for remote workers.
+            </p>
+          </Section>
+
+          <Section heading="reading">
+            <ul className="space-y-0.5">
+              <Item>
+                <Ext href="https://amzn.to/4li1vpU">One Golden Summer</Ext>
+              </Item>
+              <Item>
+                <Ext href="https://amzn.to/4meaxp2">
+                  Sam Walton: Made In America
+                </Ext>
+              </Item>
+            </ul>
+          </Section>
+
+          <Section heading="archive">
+            <ExpandableCard title="bookshelf" toggleId="bookshelf">
+              <BookYear year="2025">
+                <Book href="https://amzn.to/4eckvn6">
+                  Grinding It Out: The Making of McDonald&#39;s
+                </Book>
+                <Book href="https://amzn.to/4dfip4n">
+                  Caste: The Origins of Our Discontents
+                </Book>
+              </BookYear>
+              <BookYear year="2024">
+                <Book href="https://amzn.to/3ZFO7EK">Same as Ever</Book>
+                <Book href="https://amzn.to/4dC7bIv">Chaos Monkeys</Book>
+                <Book href="https://amzn.to/3AzU3on">The Algebra of Wealth</Book>
+                <Book href="https://amzn.to/4dY8iBL">Disrupted</Book>
+                <Book href="https://amzn.to/3S0ABaS">Six of Crows</Book>
+                <Book href="https://amzn.to/4g2pQhV">Daring Greatly</Book>
+                <Book href="https://amzn.to/3XmxJrt">Status and Culture</Book>
+              </BookYear>
+              <BookYear year="2023">
+                <Book href="https://amzn.to/3UbUyup">
+                  The Rise of Theodore Roosevelt
+                </Book>
+                <Book href="https://amzn.to/3WqWj6J">
+                  Lights Out: The Fall of GE
+                </Book>
+                <Book href="https://amzn.to/46me39G">Red Queen</Book>
+                <Book href="https://amzn.to/44f1RFB">Outlive</Book>
+                <Book href="https://amzn.to/3pdP9Z9">
+                  Guns, Germs, and Steel
+                </Book>
+                <Book href="https://amzn.to/3PtggKr">To Sell Is Human</Book>
+                <Book href="https://amzn.to/3NJM6B5">Influence</Book>
+                <Book href="https://amzn.to/3DTiAV3">Ikigai</Book>
+              </BookYear>
+              <BookYear year="2022">
+                <Book href="https://amzn.to/3SucSwY">Onward</Book>
+                <Book href="https://amzn.to/3Bu3vGW">Amazon Unbound</Book>
+                <Book href="https://amzn.to/3dPc7jg">Give and Take</Book>
+                <Book href="https://amzn.to/3SsetTS">Ego Is the Enemy</Book>
+                <Book href="https://amzn.to/3BKcIuD">Red Roulette</Book>
+                <Book href="https://amzn.to/3ffuuym">Frankenstein</Book>
+                <Book href="https://amzn.to/3LI3JyE">Mental Immunity</Book>
+                <Book href="https://amzn.to/3r34SYh">
+                  Counselling for Toads
+                </Book>
+                <Book href="https://amzn.to/3xTtCps">
+                  Adult Children of Emotionally Immature Parents
+                </Book>
+                <Book href="https://amzn.to/3S6g6XL">What Happened to You?</Book>
+                <Book href="https://amzn.to/3CbPa3r">Token Economy</Book>
+                <Book href="https://amzn.to/3LHklXc">Status Anxiety</Book>
+              </BookYear>
+              <BookYear year="2021">
+                <Book href="https://amzn.to/3DVjikU">
+                  The Subtle Art of Not Giving a F*ck
+                </Book>
+                <Book href="https://amzn.to/3DYjy2B">Stillness Is the Key</Book>
+                <Book href="https://amzn.to/3DQ4hAz">Land of Big Numbers</Book>
+                <Book href="https://amzn.to/3r8kk5c">What If?</Book>
+                <Book href="https://amzn.to/3Su4JbS">
+                  A Compass to Fulfillment
+                </Book>
+                <Book href="https://amzn.to/3Sj2wQT">
+                  You Can Be a Stock Market Genius
+                </Book>
+                <Book href="https://amzn.to/3BLFACG">Delivering Happiness</Book>
+                <Book href="https://amzn.to/3RdEG7J">Value Investing</Book>
+                <Book href="https://amzn.to/3RdE4yQ">
+                  Competition Demystified
+                </Book>
+                <Book href="https://amzn.to/3DTTndo">
+                  The Most Important Thing
+                </Book>
+                <Book href="https://amzn.to/3UELcaM">Tools of Titans</Book>
+              </BookYear>
+              <BookYear year="2020">
+                <Book href="https://amzn.to/3xSG1tY">
+                  The Almanack of Naval Ravikant
+                </Book>
+                <Book href="https://amzn.to/3DUvZfE">
+                  The Psychology of Money
+                </Book>
+                <Book href="https://amzn.to/3Sxnj2V">
+                  What I Learned Losing A Million Dollars
+                </Book>
+                <Book href="https://amzn.to/3Su3rxy">Kochland</Book>
+                <Book href="https://amzn.to/3C48FK3">Zero to One</Book>
+                <Book href="https://amzn.to/3Reyahd">AI Superpowers</Book>
+                <Book href="https://amzn.to/3C8uh91">Thing Explainer</Book>
+                <Book href="https://amzn.to/3r329Ox">
+                  Distressed Debt Analysis
+                </Book>
+                <Book href="https://amzn.to/3xROopu">1984</Book>
+              </BookYear>
+            </ExpandableCard>
+          </Section>
+
+          <p className="dim pt-6">
+            <span className="text-accent">--</span> EOF · inspired by{' '}
+            <Ext href="https://www.natecation.com/now/">nathan&apos;s now</Ext>
+          </p>
+        </div>
+        </div>
+      </CLIShell>
     </>
   )
+}
+
+function Section({ heading, children }) {
+  return (
+    <section>
+      <p className="dim mb-1.5">
+        <span className="text-accent">## </span>
+        {heading}
+      </p>
+      <div className="text-ink">{children}</div>
+    </section>
+  )
+}
+
+function Item({ children }) {
+  return (
+    <li className="flex gap-2">
+      <span className="dim">–</span>
+      <span>{children}</span>
+    </li>
+  )
+}
+
+function BookYear({ year, children }) {
+  return (
+    <div className="mt-4 first:mt-2 grid grid-cols-[3.5rem_1fr] gap-x-3 text-[13px]">
+      <p className="dim tnum pt-0.5">{year}</p>
+      <ul className="space-y-0.5">{children}</ul>
+    </div>
+  )
+}
+
+function Book({ href, children }) {
+  return (
+    <li className="flex gap-2">
+      <span className="dim">–</span>
+      <Ext href={href}>{children}</Ext>
+    </li>
+  )
+}
+
+function Ext({ href, children }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="underline decoration-rule underline-offset-2 hover:decoration-accent hover:text-accent"
+    >
+      {children}
+    </a>
+  )
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return { props: { allPostsData } }
 }

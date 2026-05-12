@@ -1,28 +1,22 @@
 import { useState } from 'react'
-import readingTime from 'reading-time'
-import { MdExpandMore, MdExpandLess } from 'react-icons/md'
-import { IconContext } from 'react-icons'
 
-export default function ExpandableCard(props) {
+export default function ExpandableCard({ title, children, toggleId }) {
   const [expanded, setExpanded] = useState(false)
 
   return (
-    <div className="bg-cyan-500 rounded-xl border-black border-2 p-3 text-left">
-      <button className="w-full" onClick={() => setExpanded(!expanded)}>
-        <div className="flex justify-between px-2 items-center">
-          <p className="text-base md:text-xl text-black font-bold">
-            {props.title}
-          </p>
-          <IconContext.Provider
-            value={{
-              className: 'text-xl md:text-3xl font-bold text-black',
-            }}
-          >
-            {expanded ? <MdExpandLess /> : <MdExpandMore />}
-          </IconContext.Provider>
-        </div>
+    <div>
+      <button
+        data-toggle={toggleId}
+        className="text-left flex items-center gap-2 group text-[13px]"
+        onClick={() => setExpanded(!expanded)}
+        aria-expanded={expanded}
+      >
+        <span className="dim">[{expanded ? '−' : '+'}]</span>
+        <span className="text-ink group-hover:text-accent transition-colors">
+          {title}
+        </span>
       </button>
-      {expanded && <div className="pt-2 px-2 text-black">{props.children}</div>}
+      {expanded && <div className="pt-3 pl-4 border-l border-rule ml-1">{children}</div>}
     </div>
   )
 }

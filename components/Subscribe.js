@@ -8,57 +8,52 @@ function Subscribe() {
 
   const subscribe = async (e) => {
     e.preventDefault()
-
     setState('Loading')
 
     try {
-      const response = await axios.post('/api/subscribe', { email })
+      await axios.post('/api/subscribe', { email })
       setState('Success')
       setEmail('')
-    } catch (e) {
-      setErrorMsg(e.response.data.error)
+    } catch (err) {
+      setErrorMsg(err.response?.data?.error ?? 'Something went wrong')
       setState('Error')
     }
   }
 
   return (
-    <div className="bg-gray-50 border-gray-300 dark:border-slate-500 border-[2px] rounded-xl p-3 text-left drop-shadow-sm dark:bg-slate-800">
-      <p className="mt-1 font-medium text-base md:text-xl text-gray-900 dark:text-slate-100">
-        Subscribe and expect less than 5 posts a year.
+    <div className="border-t border-b border-rule py-6 my-10">
+      <p className="text-sm uppercase tracking-widest text-muted mb-3">
+        Newsletter
+      </p>
+      <p className="text-base text-ink mb-4">
+        A few times a year. No noise.
       </p>
       <form onSubmit={subscribe}>
-        <div className="flex flex-col items-center">
-          <div className="mt-4 w-full">
-            {/* align input and button horizontally center */}
-            <input
-              required
-              className="w-3/5 px-2 py-1 border-gray-300 dark:border-slate-500 border-[2px] rounded-l-lg h-10 md:w-4/5"
-              id="email-input"
-              name="email"
-              type="email"
-              placeholder="Your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-
-            <button
-              disabled={state === 'Loading'}
-              type="submit"
-              className="w-2/5 bg-gray-900 text-white font-bold py-2 px-4 rounded-r-lg md:w-1/5"
-              onClick={subscribe}
-            >
-              Subscribe
-            </button>
-          </div>
+        <div className="flex gap-3 items-baseline border-b border-rule pb-2">
+          <input
+            required
+            className="flex-1 bg-transparent text-ink placeholder:text-muted focus:outline-none text-base"
+            id="email-input"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button
+            disabled={state === 'Loading'}
+            type="submit"
+            className="text-sm uppercase tracking-widest text-ink hover:text-accent disabled:text-muted"
+          >
+            {state === 'Loading' ? 'Sending' : 'Subscribe'}
+          </button>
         </div>
-        <div className="mt-2">
+        <div className="mt-3 text-sm">
           {state === 'Error' && (
-            <h4 className="text-red-400">Something went wrong: {errorMsg}</h4>
+            <p className="text-accent">{errorMsg}</p>
           )}
           {state === 'Success' && (
-            <h4 className="text-green-700 dark:text-green-600 font-semibold">
-              Awesome, you have been subscribed!
-            </h4>
+            <p className="text-muted">Subscribed. Thank you.</p>
           )}
         </div>
       </form>
